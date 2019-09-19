@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 14.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Registro de generación de código/transformación de texto">
+  <MessageClass Name="Message" Label="Mensaje" Option="Mostrar mensajes informativos" />
+  <MessageClass Name="Warning" Label="Advertencia" Option="Mostrar advertencias" />
+  <MessageClass Name="Error" Label="Error" Option="Mostrar errores" />
+  <MessageClass Name="Property" Label="Propiedad" Option="Mostrar metadatos" />
+  <MessageClass Name="Diagnostic" Label="Mensaje" Option="Mostrar mensajes de diagnóstico" />
+  <Message Timestamp="2017-03-02T03:11:56" Importance="High" Text="Se inició la generación de código o la transformación de texto." />
+  <Message Timestamp="2017-03-02T03:11:57" Importance="Diagnostic" Text="Nombre = ClassTemplate" />
+  <Message Timestamp="2017-03-02T03:11:57" Importance="Diagnostic" Text="Sobrescribir = True" />
+  <Message Timestamp="2017-03-02T03:11:57" Importance="Diagnostic" Text="ProjectPath = ..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj" />
+  <Message Timestamp="2017-03-02T03:11:57" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-03-02T03:11:57" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-03-02T03:11:57" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2017-03-02T03:11:57" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2017-03-02T03:11:57" Importance="Medium" Text="Enlace de plantilla de texto de Hospital_Diagramas: 'ClassTemplate' aplicará ClassTemplate.t4 a: 'Hospital_Diagramas::Persona' -  (Class), 'Hospital_Diagramas::Alumno' -  (Class), 'Hospital_Diagramas::Especialista' -  (Class), 'Hospital_Diagramas::Administrador' -  (Class), 'Hospital_Diagramas::Preguntas' -  (Class), 'Hospital_Diagramas::Consultas' -  (Class), 'Hospital_Diagramas::Personal' -  (Class) " />
+  <Message Timestamp="2017-03-02T03:12:20" Importance="Medium" Text="Proyecto agregado: C:\Users\Octavio\Desktop\Hospital_Diagramas\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj" />
+  <Message Timestamp="2017-03-02T03:12:20" Importance="Medium" Text="'Hospital_Diagramas::Persona' -  (Class): correcto (archivo creado) - C:\Users\Octavio\Desktop\Hospital_Diagramas\Hospital_DiagramasLib\GeneratedCode\Persona.cs" />
+  <Message Timestamp="2017-03-02T03:12:21" Importance="Medium" Text="'Hospital_Diagramas::Alumno' -  (Class): correcto (archivo creado) - C:\Users\Octavio\Desktop\Hospital_Diagramas\Hospital_DiagramasLib\GeneratedCode\Alumno.cs" />
+  <Message Timestamp="2017-03-02T03:12:21" Importance="Medium" Text="'Hospital_Diagramas::Especialista' -  (Class): correcto (archivo creado) - C:\Users\Octavio\Desktop\Hospital_Diagramas\Hospital_DiagramasLib\GeneratedCode\Especialista.cs" />
+  <Message Timestamp="2017-03-02T03:12:22" Importance="Medium" Text="'Hospital_Diagramas::Administrador' -  (Class): correcto (archivo creado) - C:\Users\Octavio\Desktop\Hospital_Diagramas\Hospital_DiagramasLib\GeneratedCode\Administrador.cs" />
+  <Message Timestamp="2017-03-02T03:12:22" Importance="Medium" Text="'Hospital_Diagramas::Preguntas' -  (Class): correcto (archivo creado) - C:\Users\Octavio\Desktop\Hospital_Diagramas\Hospital_DiagramasLib\GeneratedCode\Preguntas.cs" />
+  <Message Timestamp="2017-03-02T03:12:22" Importance="Medium" Text="'Hospital_Diagramas::Consultas' -  (Class): correcto (archivo creado) - C:\Users\Octavio\Desktop\Hospital_Diagramas\Hospital_DiagramasLib\GeneratedCode\Consultas.cs" />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Medium" Text="'Hospital_Diagramas::Personal' -  (Class): correcto (archivo creado) - C:\Users\Octavio\Desktop\Hospital_Diagramas\Hospital_DiagramasLib\GeneratedCode\Personal.cs" />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="Nombre = StructTemplate" />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="Sobrescribir = True" />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="ProjectPath = ..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj" />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Medium" Text="Enlace de plantilla de texto de Hospital_Diagramas: 'StructTemplate' aplicará StructTemplate.t4 a: 'Hospital_Diagramas::Persona' -  (Class), 'Hospital_Diagramas::Alumno' -  (Class), 'Hospital_Diagramas::Especialista' -  (Class), 'Hospital_Diagramas::Administrador' -  (Class), 'Hospital_Diagramas::Preguntas' -  (Class), 'Hospital_Diagramas::Consultas' -  (Class), 'Hospital_Diagramas::Personal' -  (Class) " />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'Hospital_Diagramas::Persona' -  (Class): no se generó ningún archivo porque el método 'AppliesToElement' de la plantilla 'StructTemplate.t4' se evaluó como false." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'Hospital_Diagramas::Alumno' -  (Class): no se generó ningún archivo porque el método 'AppliesToElement' de la plantilla 'StructTemplate.t4' se evaluó como false." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'Hospital_Diagramas::Especialista' -  (Class): no se generó ningún archivo porque el método 'AppliesToElement' de la plantilla 'StructTemplate.t4' se evaluó como false." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'Hospital_Diagramas::Administrador' -  (Class): no se generó ningún archivo porque el método 'AppliesToElement' de la plantilla 'StructTemplate.t4' se evaluó como false." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'Hospital_Diagramas::Preguntas' -  (Class): no se generó ningún archivo porque el método 'AppliesToElement' de la plantilla 'StructTemplate.t4' se evaluó como false." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'Hospital_Diagramas::Consultas' -  (Class): no se generó ningún archivo porque el método 'AppliesToElement' de la plantilla 'StructTemplate.t4' se evaluó como false." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'Hospital_Diagramas::Personal' -  (Class): no se generó ningún archivo porque el método 'AppliesToElement' de la plantilla 'StructTemplate.t4' se evaluó como false." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="La selección incluía 10 elementos que no estaban enlazados a una plantilla." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'7d9d5529-c711-4f6c-817b-1204ce24e210' -  (Generalization): sin plantilla enlazada." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'954fbe40-90c2-4ebe-837c-6d348ee86dad' -  (Generalization): sin plantilla enlazada." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'e4732717-c5a0-49e1-b468-4e3ddb7ab762' -  (Generalization): sin plantilla enlazada." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'9dc54a4a-5dda-4277-8f92-23349a1acd4d' -  (Generalization): sin plantilla enlazada." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'0d839cb6-bebb-4820-9e2a-368cfb39d15e' -  (Generalization): sin plantilla enlazada." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'87d2b19f-3dee-4284-ab09-3e7a22792d7c' -  (Generalization): sin plantilla enlazada." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'7f6609ec-061f-40b5-a6ed-39347a8281c7' -  (Generalization): sin plantilla enlazada." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'b2481c26-f75b-4528-a97f-0418c10eb438' -  (Generalization): sin plantilla enlazada." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'4f0b0632-ed84-4799-97d5-b6599a65fb98' -  (Generalization): sin plantilla enlazada." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="Diagnostic" Text="'f599145e-2b2f-4c46-aab2-aaceebf1966f' -  (Generalization): sin plantilla enlazada." />
+  <Message Timestamp="2017-03-02T03:12:23" Importance="High" Text="Generación de código completa. Errores: 0. Advertencias: 0." />
+</Log>

@@ -1,0 +1,567 @@
+USE [A_Hospital]
+GO
+/****** Object:  StoredProcedure [dbo].[MiCuestionario]    Script Date: 04/06/2017 06:10:52 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[MiCuestionario]
+ @Op int =null,
+
+ @fk_alumno nvarchar(40) = null,
+ @alu_E1 int = null,
+ @alu_E2 int = null,
+ @alu_E3 int = null,
+
+ @fk_tbl_g1 int = null,
+ @p2dDiagnostoco int = null,
+ @p2dCaries int = null,
+ @p2dProfiliaxis int = null,
+ @p2dDolorDeMuelas int = null,
+ @p2dGingivitis int = null,
+ @p2dTratamientos int = null,
+ @p2dEdolencias int = null,
+ @p2dNinguno int = null,
+ @fk_tbl_g2 int = null,
+ @fk_tbl_g3 int = null,
+ @pd5 int = null,
+ @pd6 int = null,
+ @pd7 int = null,
+ @pd8 int = null,
+ @pd9 int = null,
+ @pd10 int = null,
+ @pd11 int = null,
+--Medico
+ @fk_tbl_g4 int = null,
+ @fk_tbl_g5 int = null,
+ @fk_tbl_g6 int = null,
+ @fk_tbl_g7 int = null,
+ @fk_tbl_g8 int = null,
+ @fk_tbl_g9 int = null,
+ @pm7 nvarchar(100) = null,
+ @fk_tbl_g10 int = null,
+ @fk_tbl_g11 int = null,
+ @fk_tbl_g12 int = null,
+ @pm11 int = null,
+ @pm12 int = null,
+ @pm13 int = null,
+ @pm14 int = null,
+ @pm15 int = null,
+ @pm16 int = null,
+ @pm17 float =null,
+ @pm18 float =null,
+ @pm19 float =null,
+ @pm20 int = null,
+ @pm21 int = null,
+ @pm22 int = null,
+ @pm23DIABETES_MELLITUS int = null,
+ @pm23HIPERTENSION_ARTERIAL int = null,
+ @pm23CARDIOPATIAS int = null, 
+ @pm23CANCER int = null,
+ @pm23EPILEPSIA int = null,
+ @pm23ENFERMEDADES_AUTOINMUNES int = null, 
+ @pm23ENFERMEDADES_PSIQUIÁTRICAS int = null,
+ @pm23ENFERMEDADES_SANGRE int = null,
+ @pm23Ninguno int= null,
+ @pm24DIABETES_MELLITUS int = null,
+ @pm24HIPERTENSION_ARTERIAL int = null,
+ @pm24CARDIOPATIAS int = null,
+ @pm24CANCER int = null,
+ @pm24EPILEPSIA int = null,
+ @pm24ENFERMEDADES_AUTOINMUNES int = null,
+ @pm24ENFERMEDADES_PSIQUIÁTRICAS int = null,
+ @pm24ENFERMEDADES_SANGRE int = null,
+ @pm24Ninguno int= null,
+ @pm25DIABETES_MELLITUS int = null,
+ @pm25HIPERTENSION_ARTERIAL int = null,
+ @pm25CARDIOPATIAS int = null, 
+ @pm25CANCER int = null,
+ @pm25EPILEPSIA int = null,
+ @pm25ENFERMEDADES_AUTOINMUNES int = null, 
+ @pm25ENFERMEDADES_PSIQUIÁTRICAS int = null,
+ @pm25ENFERMEDADES_SANGRE int = null, 
+ @pm25Ninguno int= null,
+
+ @pp1 int = null, 
+  @pp2 int = null, 
+  @fk_tbl_g13 int = null, 
+  @pp4 int = null, 
+  @tbl_g14_5 int = null, 
+  @tbl_g14_6 int = null, 
+  @tbl_g14_7 int = null, 
+  @tbl_g14_8 int = null, 
+  @pp9DivorcioPadres int = null,
+  @pp9NacimmientoHermano int = null,
+  @pp9FallecimientoAbuelo int = null,
+  @pp9FallecimientoPadres int = null,
+  @pp9FallecimientoHermanos int = null,
+  @pp9FallecimientoFamiliar int = null,
+  @pp9AusenciaDePadre int = null,
+  @pp9AusenciaDeMadre int = null,
+  @pp9CambioDeDomicilio int = null,
+  @pp9ViolenciaFamiliar int = null,
+  @pp9AbusoSexual int = null,
+  @pp9VictimaBullying int = null,
+  @pp9Ninguno int = null,
+  @pp10DivorcioPadres int = null,
+  @pp10NacimmientoHermano int = null,
+  @pp10FallecimientoAbuelo int = null,
+  @pp10FallecimientoPadres int = null,
+  @pp10FallecimientoHermanos int = null,
+  @pp10FallecimientoFamiliar int = null,
+  @pp10AusenciaDePadre int = null,
+  @pp10AusenciaDeMadre int = null,
+  @pp10CambioDeDomicilio int = null,
+  @pp10ViolenciaFamiliar int = null,
+  @pp10AbusoSexual int = null,
+  @pp10VictimaBullying int = null,
+  @pp10Ninguno int = null,
+  @fk_tbl_g15_1 int = null, 
+  @fk_tbl_g15_2 int = null, 
+  @pp13 int = null, 
+  @pp14 int = null, 
+  @fk_tbl_g16 int = null, 
+  @fk_tbl_g17  int = null, 
+  @fk_tbl_g18 int = null, 
+  @pp19 int = null, 
+  @fk_tbl_g19 int = null
+
+AS
+BEGIN
+	--Indice de procedimientos
+	--1 Reguistro cuestionario dentista
+	--2 Reguistro cuestionario medico
+	--3 Reguistro cuestionario psicologo
+	--4 Consulta cuestionario dentista
+	--5 Consulta cuestionario medico
+	--6 Consulta cuestionario psicolgo
+	--7 Consulta cuestionario General
+
+	SET NOCOUNT ON;
+	
+--Llenar cuestionario Dentista
+	 if (@Op=1)
+	begin
+	 insert into Dental values(@fk_alumno,@fk_tbl_g1 ,@p2dDiagnostoco ,@p2dCaries ,@p2dProfiliaxis ,@p2dDolorDeMuelas ,@p2dGingivitis ,@p2dTratamientos ,@p2dEdolencias,@p2dNinguno ,@fk_tbl_g2 , @fk_tbl_g3,@pd5,@pd6 , @pd7 ,@pd8 ,@pd9 ,@pd10 ,@pd11);
+	 update ceAlumnos set ceAlumnos.alu_E2=1 where ceAlumnos.alu_NumControl=@fk_alumno
+	end
+--Llenar cuestionario Medico
+	if @Op=2
+	begin
+    insert into Medico values(@fk_alumno,@fk_tbl_g4 ,@fk_tbl_g5 ,@fk_tbl_g6 ,@fk_tbl_g7 ,@fk_tbl_g8 ,@fk_tbl_g9 ,@pm7 ,@fk_tbl_g10 ,@fk_tbl_g11,@fk_tbl_g12 ,@pm11 ,@pm12 , @pm13,@pm14,@pm15,@pm16,@pm17,@pm18,@pm19,@pm20,@pm21,@pm22,@pm23DIABETES_MELLITUS,@pm23HIPERTENSION_ARTERIAL,@pm23CARDIOPATIAS,@pm23CANCER,@pm23EPILEPSIA,@pm23ENFERMEDADES_AUTOINMUNES,@pm23ENFERMEDADES_PSIQUIÁTRICAS,@pm23ENFERMEDADES_SANGRE, @pm23Ninguno,@pm24DIABETES_MELLITUS,@pm24HIPERTENSION_ARTERIAL,@pm24CARDIOPATIAS,@pm24CANCER,@pm24EPILEPSIA,@pm24ENFERMEDADES_AUTOINMUNES,@pm24ENFERMEDADES_PSIQUIÁTRICAS,@pm24ENFERMEDADES_SANGRE,@pm24Ninguno,@pm25DIABETES_MELLITUS,@pm25HIPERTENSION_ARTERIAL,@pm25CARDIOPATIAS , @pm25CANCER,@pm25EPILEPSIA,@pm25ENFERMEDADES_AUTOINMUNES,@pm25ENFERMEDADES_PSIQUIÁTRICAS,@pm25ENFERMEDADES_SANGRE,@pm25Ninguno);
+	update ceAlumnos set ceAlumnos.alu_E1=1 where ceAlumnos.alu_NumControl=@fk_alumno
+	end
+--Llenar cuestionario Psicologo
+	if @Op=3
+	begin
+     insert into Psicologico values(@fk_alumno,@pp1,@pp2,@fk_tbl_g13,@pp4,@tbl_g14_5,@tbl_g14_6 ,@tbl_g14_7,@tbl_g14_8,@pp9DivorcioPadres,@pp9NacimmientoHermano,@pp9FallecimientoAbuelo,@pp9FallecimientoPadres,@pp9FallecimientoHermanos,@pp9FallecimientoFamiliar,@pp9AusenciaDePadre,@pp9AusenciaDeMadre,@pp9CambioDeDomicilio,@pp9ViolenciaFamiliar,@pp9AbusoSexual,@pp9VictimaBullying,@pp9Ninguno,@pp10DivorcioPadres,@pp10NacimmientoHermano ,@pp10FallecimientoAbuelo,@pp10FallecimientoPadres,@pp10FallecimientoHermanos,@pp10FallecimientoFamiliar,@pp10AusenciaDePadre,@pp10AusenciaDeMadre ,@pp10CambioDeDomicilio,@pp10ViolenciaFamiliar,@pp10AbusoSexual,@pp10VictimaBullying,@pp10Ninguno,@fk_tbl_g15_1,@fk_tbl_g15_2 ,@pp13,@pp14 ,@fk_tbl_g16,@fk_tbl_g17,@fk_tbl_g18 ,@pp19,@fk_tbl_g19);
+	 update ceAlumnos set ceAlumnos.alu_E3=1 where ceAlumnos.alu_NumControl=@fk_alumno
+	end
+--Consulta cuestionario dentista
+    if @Op=4 --Consulta cuestionario dental
+	begin
+      select * from Dental where  fk_Alumno=@fk_alumno
+	end
+	if @Op=5 -- Consulta cuestionario Medico
+	begin
+	select * from Medico where fk_Alumno=@fk_alumno
+	end
+	if @Op=6 -- Consulta cuestionario Psicologico
+	begin
+	select * from Psicologico where fk_Alumno=@fk_alumno
+	end
+	if @Op=7--Consulta cuestionario General
+	begin
+declare @d1 nvarchar(max)
+declare @d2 nvarchar(max)
+declare @d3 nvarchar(max)
+declare @d4 nvarchar(max)
+declare @d5 nvarchar(max)
+declare @d6 nvarchar(max)
+declare @d7 nvarchar(max)
+declare @d8 nvarchar(max)
+declare @d9 nvarchar(max)
+declare @d10 nvarchar(max)
+declare @d11 nvarchar(max)
+---medico
+declare @m1 nvarchar(max)
+declare @m2 nvarchar(max)
+declare @m3 nvarchar(max)
+declare @m4 nvarchar(max)
+declare @m5 nvarchar(max)
+declare @m6 nvarchar(max)
+declare @m7 nvarchar(max)
+declare @m8 nvarchar(max)
+declare @m9 nvarchar(max)
+declare @m10 nvarchar(max)
+declare @m11 nvarchar(max)
+declare @m12 nvarchar(max)
+declare @m13 nvarchar(max)
+declare @m14 nvarchar(max)
+declare @m15 nvarchar(max)
+declare @m16 nvarchar(max)
+declare @m17 nvarchar(max)
+declare @m18 nvarchar(max)
+declare @m19 nvarchar(max)
+declare @m20 nvarchar(max)
+declare @m21 nvarchar(max)
+declare @m22 nvarchar(max)
+declare @m23 nvarchar(max)
+declare @m24 nvarchar(max)
+declare @m25 nvarchar(max)
+
+declare @p1 nvarchar(max)
+declare @p2 nvarchar(max)
+declare @p3 nvarchar(max)
+declare @p4 nvarchar(max)
+declare @p5 nvarchar(max)
+declare @p6 nvarchar(max)	
+declare @p7 nvarchar(max)
+declare @p8 nvarchar(max)
+declare @p9 nvarchar(max)
+declare @p10 nvarchar(max)
+declare @p11 nvarchar(max)
+declare @p12 nvarchar(max)
+declare @p13 nvarchar(max)
+declare @p14 nvarchar(max)
+declare @p15 nvarchar(max)
+declare @p16 nvarchar(max)
+declare @p17 nvarchar(max)
+declare @p18 nvarchar(max)
+declare @p19 nvarchar(max)
+
+
+
+set @d2='Motivos: '
+set @m23='Enfermedades: '
+set @m24='Enfermedades: '
+set @m25='Enfermedades: '
+set @p9='Sucesos: '
+set @p10='Sucesos: '
+---------------Dentista--------------------------------------
+set @d1=(select t1.descripcion from [dbo].[tbl_g1] as t1 inner join [dbo].[Dental] as t2  on t1.pk_tbl_g1=t2.fk_tbl_g1  where t2.fk_Alumno=@fk_alumno)
+if (select t1.p2dDiagnostoco from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d2=@d2+'- Diagnostico'
+if (select t1.p2dCaries from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d2=@d2+'- Caries'
+if (select t1.p2dProfiliaxis from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d2=@d2+'- Profilaxis'
+if (select t1.p2dDolorDeMuelas from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d2=@d2+'- Dolor de muelas'
+if (select t1.p2dGingivitis from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d2=@d2+'- Gingivitis'
+if (select t1.p2dTratamientos from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d2=@d2+'- Tratamientos'
+if (select t1.p2dEdolencias from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d2=@d2+'- Endolencias'
+if (select t1.p2dNinguno from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d2=@d2+'- Ninguno'
+set @d3=(select t1.descripcion from [dbo].tbl_g2 as t1 inner join [dbo].[Dental] as t2  on t1.pk_tbl_g2=t2.fk_tbl_g2  where t2.fk_Alumno=@fk_alumno)
+set @d4=(select t1.descripcion from [dbo].tbl_g3 as t1 inner join [dbo].[Dental] as t2  on t1.pk_tbl_g3=t2.fk_tbl_g3  where t2.fk_Alumno=@fk_alumno)
+if (select t1.pd5 from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d5='Si'
+else
+set @d5='No'
+if (select t1.pd6 from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d6='Si'
+else
+set @d6='No'
+if (select t1.pd7 from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d7='Si'
+else
+set @d7='No'
+if (select t1.pd8 from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d8='Si'
+else
+set @d8='No'
+
+
+if (select t1.pd9 from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d9='Si'
+else
+set @d9='No'
+
+
+if (select t1.pd7 from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d10='Si'
+else
+set @d10='No'
+
+
+if (select t1.pd11 from [dbo].[Dental] as t1 where t1.fk_Alumno=@fk_alumno)=1
+set @d11='Si'
+else
+set @d11='No'
+
+
+
+------------------------------------Medico------------------------------------------
+
+set @m1=(select t1.descripcion from [dbo].[tbl_g4] as t1 inner join [dbo].[Medico] as t2  on t1.pk_tbl_g4=t2.fk_tbl_g4  where t2.fk_alumno=@fk_alumno
+)
+
+set @m2=(select t1.descripcion from [dbo].[tbl_g5] as t1 inner join [dbo].[Medico] as t2  on t1.pk_tbl_g5=t2.fk_tbl_g5  where t2.fk_alumno=@fk_alumno
+)
+set @m3=(select t1.Tipo from [dbo].[tbl_g6] as t1 inner join [dbo].[Medico] as t2  on t1.pk_tbl_g6=t2.fk_tbl_g6  where t2.fk_alumno=@fk_alumno
+)
+set @m4=(select t1.Descripcion from [dbo].[tbl_g7] as t1 inner join [dbo].[Medico] as t2  on t1.pk_tbl_g7=t2.fk_tbl_g7  where t2.fk_alumno=@fk_alumno
+)
+set @m5=(select t1.Descripcion from [dbo].[tbl_g8] as t1 inner join [dbo].[Medico] as t2  on t1.pk_tbl_g8=t2.fk_tbl_g8  where t2.fk_alumno=@fk_alumno
+)
+set @m6=(select t1.Descripcion from [dbo].[tbl_g9] as t1 inner join [dbo].[Medico] as t2  on t1.fk_tbl_g9=t2.fk_tbl_g9  where t2.fk_alumno=@fk_alumno
+)
+set @m7=(select tbl_alergia.Descripcion from Medico inner join tbl_alergia on Medico.pm7=tbl_alergia.pk_alergia where fk_alumno= @fk_alumno)
+set @m8=(select tbl_enfermedad.Descripcion from Medico inner join tbl_enfermedad on Medico.pm7=tbl_enfermedad.pk_enferdad where fk_alumno= @fk_alumno)
+set @m9=(select t1.Descripcion from [dbo].[tbl_g11] as t1 inner join [dbo].[Medico] as t2  on t1.pk_tbl_g11=t2.fk_tbl_g11  where t2.fk_alumno=@fk_alumno
+)
+set @m10=(select t1.Descripcion from [dbo].[tbl_g12] as t1 inner join [dbo].[Medico] as t2  on t1.pk_tbl_g12=t2.fk_tbl_g12  where t2.fk_alumno=@fk_alumno)
+if (select t1.pm11 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m11='Si'
+else
+set @m11='No'
+
+if (select t1.pm12 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m12='Si'
+else
+set @m12='No'
+if (select t1.pm13 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m13='Si'
+else
+set @m13='No'
+if (select t1.pm14 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m14='Si'
+else
+set @m14='No'
+if (select t1.pm15 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m15='Si'
+else
+set @m15='No'
+if (select t1.pm16 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m16='Si'
+else
+set @m16='No'
+
+set @m17=(select t1.pm17 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)
+set @m18=(select t1.pm18 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)
+set @m19=(select t1.pm19 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)
+
+if (select t1.pm20 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m20='Si'
+else
+set @m20='No'
+if (select t1.pm21 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m21='Si'
+else
+set @m21='No'
+if (select t1.pm22 from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m22='Si'
+else
+set @m22='No'
+if (select t1.pm23DIABETES_MELLITUS from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m23=@m23+'- Diabetes Mellisus'
+if (select t1.pm23HIPERTENSION_ARTERIAL from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m23=@m23+'- Hipertensión Arterial'
+if (select t1.pm23CARDIOPATIAS from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m23=@m23+'- Cardiopatias'
+if (select t1.pm23CANCER from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m23=@m23+'- Cancer'
+if (select t1.pm23EPILEPSIA from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m23=@m23+'- Epilepsia'
+if (select t1.pm23ENFERMEDADES_AUTOINMUNES from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m23=@m23+'- Enfermedades Autoinmunes'
+if (select t1.pm23ENFERMEDADES_PSIQUIÁTRICAS from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m23=@m23+'- Enfermedades Psiquiatricas'
+if (select t1.pm23ENFERMEDADES_SANGRE from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m23=@m23+'- Enfermedades de la sangre'
+if (select t1.m23NingunoA from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m23=@m23+'- Ninguna'
+
+if (select t1.pm24DIABETES_MELLITUS from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m24=@m24+'- Diabetes Mellisus'
+if (select t1.pm24HIPERTENSION_ARTERIAL from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m24=@m24+'- Hipertensión Arterial'
+if (select t1.pm24CARDIOPATIAS from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m24=@m24+'- Cardiopatias'
+if (select t1.pm24CANCER from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m24=@m24+'- Cancer'
+if (select t1.pm24EPILEPSIA from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m24=@m24+'- Epilepsia'
+if (select t1.pm24ENFERMEDADES_AUTOINMUNES from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m24=@m24+'- Enfermedades Autoinmunes'
+if (select t1.pm24ENFERMEDADES_PSIQUIÁTRICAS from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m24=@m24+'- Enfermedades Psiquiatricas'
+if (select t1.pm24ENFERMEDADES_SANGRE from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m24=@m24+'- Enfermedades de la sangre'
+if (select t1.m24NingunoA from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m24=@m24+'- Ninguna'
+
+if (select t1.pm25DIABETES_MELLITUS from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m25=@m25+'- Diabetes Mellisus'
+if (select t1.pm25HIPERTENSION_ARTERIAL from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m25=@m25+'- Hipertensión Arterial'
+if (select t1.pm25CARDIOPATIAS from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m25=@m25+'- Cardiopatias'
+if (select t1.pm25CANCER from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m25=@m25+'- Cancer'
+if (select t1.pm25EPILEPSIA from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m25=@m25+'- Epilepsia'
+if (select t1.pm25ENFERMEDADES_AUTOINMUNES from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m25=@m25+'- Enfermedades Autoinmunes'
+if (select t1.pm25ENFERMEDADES_PSIQUIÁTRICAS from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m25=@m25+'- Enfermedades Psiquiatricas'
+if (select t1.pm25ENFERMEDADES_SANGRE from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m25=@m25+'- Enfermedades de la sangre'
+if (select t1.m25NingunoA from [dbo].[Medico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @m25=@m25+'- Ninguna'
+---Psicologo
+if (select t1.pp1 from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p1='Si'
+else
+set @p1='No'
+if (select t1.pp2 from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p2='Si'
+else
+set @p2='No'
+set @p3=(select t1.Descripcion from [dbo].[tbl_g13] as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g13=t2.fk_tbl_g13  where t2.fk_alumno=@fk_alumno
+)
+if (select t1.pp4 from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p4='Si'
+else
+set @p4='No'
+set @p5=(select t1.Descripcion from [dbo].tbl_g15 as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g15=t2.tbl_g14_5 where t2.fk_alumno=@fk_alumno
+)
+set @p6=(select t1.Descripcion from [dbo].[tbl_g15] as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g15=t2.tbl_g14_6  where t2.fk_alumno=@fk_alumno
+)
+set @p7=(select t1.Descripcion from [dbo].[tbl_g15] as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g15=t2.tbl_g14_7  where t2.fk_alumno=@fk_alumno
+)
+set @p8=(select t1.Descripcion from [dbo].[tbl_g15] as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g15=t2.tbl_g14_8 where t2.fk_alumno=@fk_alumno
+)
+
+
+if (select t1.pp9DivorcioPadres from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Divorcio Padres'
+
+if (select t1.pp9FallecimientoAbuelo from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Fallecimiento del abuelo'
+
+if (select t1.pp9FallecimientoPadres from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Fallecimiento Padres'
+
+if (select t1.pp9FallecimientoHermanos from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Fallecimiento Hermanos'
+
+if (select t1.pp9FallecimientoFamiliar from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Fallecimiento Familiar'
+
+if (select t1.pp9AusenciaDePadre from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Ausencia de Padre'
+
+if (select t1.pp9AusenciaDeMadre from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Ausencia de Madre'
+
+if (select t1.pp9CambioDeDomicilio from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Cambio de Domicilio'
+
+if (select t1.pp9ViolenciaFamiliar from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Violencia Familiar'
+
+if (select t1.pp9AbusoSexual from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Abuso Sexual'
+
+if (select t1.pp9VictimaBullying from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Victima de Bullying'
+
+if (select t1.pp9Ninguno from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p9=@p9+'- Ninguno'
+
+if (select t1.pp10DivorcioPadres from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Divorcio Padres'
+
+if (select t1.pp10FallecimientoAbuelo from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Fallecimiento del abuelo'
+
+if (select t1.pp9FallecimientoPadres from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Fallecimiento Padres'
+
+if (select t1.pp10FallecimientoHermanos from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Fallecimiento Hermanos'
+
+if (select t1.pp10FallecimientoFamiliar from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Fallecimiento Familiar'
+
+if (select t1.pp10AusenciaDePadre from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Ausencia de Padre'
+
+if (select t1.pp9AusenciaDeMadre from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Ausencia de Madre'
+
+if (select t1.pp10CambioDeDomicilio from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Cambio de Domicilio'
+
+if (select t1.pp10ViolenciaFamiliar from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Violencia Familiar'
+
+if (select t1.pp10AbusoSexual from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Abuso Sexual'
+
+if (select t1.pp10VictimaBullying from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Victima de Bullying'
+
+if (select t1.pp10Ninguno from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p10=@p10+'- Ninguno'
+
+set @p11=(select t1.Descripcion from [dbo].[tbl_g15] as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g15=t2.fk_tbl_g15_1  where t2.fk_alumno=@fk_alumno
+)
+set @p12=(select t1.Descripcion from [dbo].[tbl_g15] as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g15=t2.fk_tbl_g15_2  where t2.fk_alumno=@fk_alumno
+)
+if (select t1.pp13 from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p13='Si'
+else
+set @p13='No'
+if (select t1.pp14 from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p14='Si'
+else
+set @p14='No'
+set @p15=(select t1.Descripcion from [dbo].[tbl_g16] as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g16=t2.fk_tbl_g16  where t2.fk_alumno=@fk_alumno
+)
+set @p16=(select t1.Descripcion from [dbo].[tbl_g17] as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g17=t2.fk_tbl_g17  where t2.fk_alumno=@fk_alumno
+)
+set @p17=(select t1.Descripcion from [dbo].[tbl_g18] as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g18=t2.fk_tbl_g18  where t2.fk_alumno=@fk_alumno
+)
+if (select t1.pp19 from [dbo].[Psicologico] as t1 where t1.fk_alumno=@fk_alumno)=1
+set @p18='Si'
+else
+set @p18='No'
+set @p19=(select t1.Descripcion from [dbo].[tbl_g19] as t1 inner join [dbo].[Psicologico] as t2  on t1.pk_tbl_g19=t2.fk_tbl_g19  where t2.fk_alumno=@fk_alumno
+)
+
+select @d1,@d2,@d3,@d4,@d5,@d6,@d7,@d8,@d9,@d10,@d11,@m1,@m2,@m3,@m4,@m5,@m6,@m7,@m8,@m9,@m10,@m11,@m12,@m13,@m14,@m15,@m16,@m17,@m18,@m19,@m20,@m21,@m22,@m23,@m24,@m25,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17,@p18,@p19 --from Medico inner join ceAlumnos on Medico.fk_Alumno=ceAlumnos.alu_NumControl where ceAlumnos.alu_NumControl=@fk_alumno
+
+
+
+
+end
+
+
+
+
+
+
+
+	if @Op=10 -- Tipos de sangre
+	begin
+    select * from tbl_g6
+	end
+	if @Op=11-- Tipos de alergias
+	begin
+    select * from tbl_alergia
+	end
+	if @Op=12 -- Tipos de enfermedades
+	begin
+    select * from tbl_enfermedad
+	end
+	
+	
+
+END

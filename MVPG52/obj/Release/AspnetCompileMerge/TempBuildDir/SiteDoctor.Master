@@ -1,0 +1,251 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteDoctor.master.cs" Inherits="MVPG52.SiteDoctor" %>
+ 
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> Sistema compensatorio</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!--Import materialize.css-->
+    <link href="Content/materialize.min.css" rel="stylesheet" />
+    <%--<link href="Content/bootstrap.min.css" rel="stylesheet" />--%>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+
+
+
+<body>
+    <style type="text/css">
+        img {
+            width: 100%;
+        }
+
+        button {
+            width: 100px;
+            height: 100px;
+        }
+
+        .parallax-container {
+            height: 150px;
+        }
+
+        icons {
+        }
+
+        .material-icons {
+            color: red;
+            font-size: 50px;
+            text-align: left;
+        }
+
+        .pin-top {
+            position: relative;
+        }
+
+        .pin-bottom {
+            position: relative;
+        }
+
+        .pinned {
+            position: fixed;
+        }
+
+        html, body, .block {
+            height: 100%;
+        }
+
+        body {
+            background-color: #e2e2e2;
+        }
+    </style>
+
+
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <%-- Menu deslizable --%>
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="userView">
+                    <div class="background">
+                        <img src="imag/master/fondojpg.jpg" />
+                    </div>
+                    <a href="#!user">
+                        <img class="circle" src="imag/master/meme.JPG"></a>
+                    <a href="#!name"><span class="white-text name">
+                        <asp:Label ID="MenuNombre" runat="server" Text="HuanALeverto"></asp:Label></span></a>
+                    <br />
+                </div>
+
+                <li><a href="Default.aspx"><i class="material-icons" style="float: inherit">perm_identity</i>Inicio</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+            <li>
+                <asp:LinkButton ID="LinkButtonNuevaCita" runat="server" OnClick="LinkButton1_Click"><i class="material-icons" style="float: inherit">note_add</i>Ver Consultas</asp:LinkButton>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <asp:LinkButton ID="LinkButtonConsultarCita" runat="server" OnClick="LinkButton1_Click1"><i class="material-icons" style="float: inherit">query_builder</i>Consultar Consultas</asp:LinkButton>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <asp:LinkButton ID="LinkButtonCancelarCita" runat="server" OnClick="LinkButton2_Click1"><i class="material-icons" style="float:inherit" >delete</i>Cancelar Consultas</asp:LinkButton>
+            <li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <asp:LinkButton ID="LinkButtonCuestionario" runat="server" OnClick="LinkButton2_Click1"><i class="material-icons" style="float:inherit" >assignment_late</i>Ver historial clinico  </asp:LinkButton>
+            <li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+            <li><a href="#!"><i class="material-icons" style="float: inherit">contact_phone</i> Chat en linea</a></li>
+            <li>
+        </ul>
+        <br />
+        <div class="container modal-content #b71c1c red darken-4">
+            <div class="row">
+                <div class="col s2">
+                    <a href="#" data-activates="slide-out" class="button-collapse "><i class="material-icons center-align #ffffff " style="font-size: 40px; margin: auto">menu</i></a>
+                </div>
+                <div class="col s10">
+                    <!-- Prom Content 2 goes here -->
+                    <div>
+                        <h1 class="white-text big text-darken-2 valign-wrapper brand-logo center">Sistema De Servicios Médicos  <a href="#!user"></a>
+                            <!-- Logo menu -->
+                            <a class="col s2 m2 offset-m2 16 offset-l5">
+                                <u class="lighten-5 z-depth-5">
+                                    <u class="col s14">
+                                        <!-- s8 para cambiar el tamaño del logo  -->
+                                        <img src="IMAG/universidad/logoUpt.png" alt="" class=" responsive-img">
+                                    </u>
+                                </u>
+                            </a>
+                            <!-- Logo menu  -->
+                        </h1>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer class="page-footer #b71c1c red darken-4 z-depth-5">
+                <div class="container #b71c1c red darken-4">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h5 class="white-text">Footer Content</h5>
+                            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                            <h5 class="white-text">Links</h5>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                    </div>
+                </div>
+                <p>&copy; <%: DateTime.Now.Year %> Sistema compensario</p>
+            </footer>
+        </div>
+
+    </form>
+
+    <!--Import jQuery before materialize.js-->
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //código que queremos ejecutar
+            $('.pushpin-demo-nav').each(function () {
+                var $this = $(this);
+                var $target = $('#' + $(this).attr('data-target'));
+                $this.pushpin({
+                    top: $target.offset().top,
+                    bottom: $target.offset().top + $target.outerHeight() - $this.height()
+                });
+            });
+            $('.target').pushpin({
+                top: 0,
+                bottom: 1000,
+                offset: 0
+            });
+            $('.carousel').carousel();
+            $('select').material_select();
+            $('.parallax').parallax();
+            $('.tooltipped').tooltip({ delay: 10 });
+            $(".button-collapse").sideNav();
+            $('.button-collapse').sideNav({
+                menuWidth: 350, // Default is 300
+                edge: 'left', // Choose the horizontal origin
+                closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                draggable: true, width: 40, height: 30
+                // Choose whether you can drag to open on touch screens
+            });
+            $('.modal').modal();
+        });
+    </script>
+    <script type="text/javascript">
+        function quitarmensaje() {
+            $('.tooltipped').tooltip('remove');
+        }
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+
+        $(document).ready(function () {//Agendar citas opciones
+            $('select').material_select();
+        });
+
+    </script>
+</body>
+</html>

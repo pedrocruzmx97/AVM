@@ -1,0 +1,8 @@
+C:\Users\Octavio\Desktop\A_Hospital\WIN\bin\Release\WIN.exe.config
+C:\Users\Octavio\Desktop\A_Hospital\WIN\bin\Release\WIN.exe
+C:\Users\Octavio\Desktop\A_Hospital\WIN\bin\Release\WIN.pdb
+C:\Users\Octavio\Desktop\A_Hospital\WIN\obj\Release\WIN.csprojResolveAssemblyReference.cache
+C:\Users\Octavio\Desktop\A_Hospital\WIN\obj\Release\WIN.Properties.Resources.resources
+C:\Users\Octavio\Desktop\A_Hospital\WIN\obj\Release\WIN.csproj.GenerateResource.Cache
+C:\Users\Octavio\Desktop\A_Hospital\WIN\obj\Release\WIN.exe
+C:\Users\Octavio\Desktop\A_Hospital\WIN\obj\Release\WIN.pdb

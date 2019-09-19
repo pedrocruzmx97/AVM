@@ -1,0 +1,2569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="828cbd05-f35a-4229-82c2-d5742340d891"
+  name="Hospital_Diagramas" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="76c9d7ba-a06f-490f-b428-6c441481b947">
+      <body>
+licenciatura
+maestria
+doctorado
+Personal
+Administrativo
+Profesores</body>
+    </comment>
+    <comment
+      Id="ffbc5952-c741-484b-9b82-574ed81bc7d0">
+      <body>*Médico general
+*Psicólogo
+*Dentista</body>
+    </comment>
+    <comment
+      Id="117ea416-fb27-42bc-bc98-d529a125f5a4">
+      <body>Encargado</body>
+    </comment>
+  </ownedCommentsInternal>
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="33d6ebc6-9087-459b-a102-f3d8f7c24924"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="bb2d0eff-751f-48a0-be90-0139a6e43242">
+          <propertyInstance
+            Id="3a32569f-4b83-47c3-b3ba-a2a4622a3f82"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="36ff0a68-2a34-4c0d-868d-ccadefe5926b">
+          <propertyInstance
+            Id="6ca4db4b-473d-4190-a04f-2ac3b9741b88"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="6326687b-c987-4e17-9940-8d27ed56224b">
+          <propertyInstance
+            Id="1f10f89e-9c94-4d88-bf48-c79ef4bfa356"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="35b0bc45-6bb2-49ae-862d-7a490cfa0970"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="0917d4b9-b33b-4415-b80b-a24ac831476c">
+          <propertyInstance
+            Id="8e4407a6-1f48-46a2-9485-6c06604762b8"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="539da814-7925-4401-9c63-4b58a6d84d19">
+          <propertyInstance
+            Id="240386ec-7b97-4818-8ba7-abcf1a0c7c8e"
+            name="TemplateFilePath"
+            value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="fc09f8e2-1a80-4280-9586-5a61ae3c49cd">
+          <propertyInstance
+            Id="349258c7-69f4-45a1-80bb-cbb21f244a16"
+            name="ProjectPath"
+            value="ClassTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj|EnumTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj|InterfaceTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj|StructTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="f1488310-6c3e-44eb-b5a6-dc0a30fa1955">
+          <propertyInstance
+            Id="dcd63675-b2a4-4fc5-9f1b-63dd0a5536a3"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="e87f5030-26f9-4b49-9436-1a53bae710f0">
+          <propertyInstance
+            Id="3fc67206-f3fb-4bb9-8c26-df25357bafae"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="2be39a5b-f099-4194-9d8b-f3f5f4db7450">
+          <propertyInstance
+            Id="763225e1-0a5c-47ae-848c-60584f3fe570"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="6ec1ca8e-64d6-4aec-b3e4-642f6d264527">
+          <propertyInstance
+            Id="f1ca5284-e1ff-4950-8350-109ea6811409"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="80ff8410-e847-4296-a169-759301227216">
+      <profileInstance
+        Id="2511137a-fbf0-4dbf-96df-cf7911967138"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="b1bd4a30-4966-41f9-badd-39cb1b41030b">
+      <profileInstance
+        Id="9613525d-8142-4ede-a65c-0bea8bf96899"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="28fe7c27-5f99-46a7-90a3-fb40206dd572"
+        name="*Usuario"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="dcde66fc-c142-4528-b17e-c03f1e120bf8"
+            isDerived="false"
+            sourceEndRoleName="Alumno"
+            targetEndRoleName="Agendar cita"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f62e9703-583e-4417-865e-7bc76fef97b8"
+              LastKnownName="Agendar cita"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5e07b49f-4b75-4703-a5d2-c88b7b96c64c"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b4e11863-8c14-433a-aa40-10c1c0195c8b"
+                  name="Agendar cita"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="51074488-2aae-45e3-905d-0d9651e8b35f"
+            isDerived="false"
+            sourceEndRoleName="Alumno"
+            targetEndRoleName="Alumno"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="28fe7c27-5f99-46a7-90a3-fb40206dd572"
+              LastKnownName="*Usuario"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="418a9714-4a72-441a-be31-432e56fa8182"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a5edb444-cb6d-462e-899f-b5638c75ef04"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bb7d6474-0662-4fc8-ba7e-f104ac31f26e"
+            isDerived="false"
+            sourceEndRoleName="Alumno"
+            targetEndRoleName="Conultar cita"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f391188d-59a1-42a2-83d6-c0b3bd419fcf"
+              LastKnownName="Consultar cita"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2f801487-d868-428a-b7de-cdd9580b351d"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b0cb0beb-2bfd-4287-a6b9-d4de42e79b8a"
+                  name="Conultar cita"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="86fc0a93-a04a-4369-8b1e-d24502240a2d"
+            isDerived="false"
+            sourceEndRoleName="Alumno"
+            targetEndRoleName="Cancelar cita"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a6430548-bcc8-4699-af97-228b6c7304d7"
+              LastKnownName="Cancelar cita"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1411227d-9a98-495c-9843-477e24c6f43d"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="222deb15-a368-4cc7-92b7-f2b1883b6164"
+                  name="Cancelar cita"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3bc3c6a3-7fda-4280-a635-b2002f5d4e51"
+            isDerived="false"
+            sourceEndRoleName="Alumno"
+            targetEndRoleName="Ingresar al sistema"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8cf0a557-1a4f-46e0-8a3a-c793171f7187"
+              LastKnownName="Ingresar al sistema"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ab8265d9-68b0-4115-9691-2465c12f6c53"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aaa87795-515d-43a9-9d91-bb71cb1508e3"
+                  name="Ingresar al sistema"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="122a44ed-7025-429c-82a4-6c36fad1d50e"
+            isDerived="false"
+            sourceEndRoleName="Alumno"
+            targetEndRoleName="Llenar cuestionario"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1f553647-f694-42b1-8d5c-361385f360ec"
+              LastKnownName="Llenar cuestionario"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d354ef31-2f04-4755-a7d7-f47defd8a4bc"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cba2cd29-997b-42ff-ad0d-d0150997ef7d"
+                  name="Llenar cuestionario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9da1cbae-07a9-434a-bd02-deaf4dcc8843"
+            isDerived="false"
+            sourceEndRoleName="Alumno"
+            targetEndRoleName="Imprimir cita"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="088545ae-68cb-4e72-b26f-f058eb09d77e"
+              LastKnownName="Imprimir cita"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7745d47f-4452-4699-b7d6-04503fb22009"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="16497239-1537-4899-8e84-c55a174a4026"
+                  name="Imprimir cita"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="677ea69f-e20e-483f-ae98-de51436e0c35"
+            isDerived="false"
+            sourceEndRoleName="Alumno"
+            targetEndRoleName="Alumno"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="28fe7c27-5f99-46a7-90a3-fb40206dd572"
+              LastKnownName="*Usuario"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="02ab6176-4233-4f8e-ad23-b0948a848ece"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1ee929cb-0fe7-480e-a918-2274b2a7aa18"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d491d31a-525f-4b6f-9567-67c03152b2a3"
+            isDerived="false"
+            sourceEndRoleName="Alumno"
+            targetEndRoleName="Chat "
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d857bb82-161c-412a-b887-5ec4ee5bad3d"
+              LastKnownName="Chat "
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b07d3830-7459-4eb5-a5c6-9f66cbc72139"
+                  name="Alumno"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e808ce0f-7db2-49c0-baea-7655b65323ac"
+                  name="Chat "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1f553647-f694-42b1-8d5c-361385f360ec"
+        name="Llenar cuestionario"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="110cbed5-6d32-4d5a-8e1c-3d833c796abc">
+            <useCaseMoniker
+              Id="ea7ac8d4-1662-4ac6-81b8-36830efd35da"
+              LastKnownName="Verificar encuesta"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f62e9703-583e-4417-865e-7bc76fef97b8"
+        name="Agendar cita"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="35faa645-7ed1-4df7-8db2-9c46f86c19d4">
+            <useCaseMoniker
+              Id="8e734ddb-46a2-4666-b7f5-9dd950682ce8"
+              LastKnownName="Autentificar"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+          <include
+            Id="53a61249-e78e-4b04-af35-ed7d2926980e">
+            <useCaseMoniker
+              Id="ea7ac8d4-1662-4ac6-81b8-36830efd35da"
+              LastKnownName="Verificar encuesta"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f391188d-59a1-42a2-83d6-c0b3bd419fcf"
+        name="Consultar cita"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="b28c94d5-fb00-4f73-8c80-6ea9c13a146d">
+            <useCaseMoniker
+              Id="8e734ddb-46a2-4666-b7f5-9dd950682ce8"
+              LastKnownName="Autentificar"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+          <include
+            Id="1c2a67a6-355a-4a39-a145-701a6801faa0">
+            <useCaseMoniker
+              Id="ea7ac8d4-1662-4ac6-81b8-36830efd35da"
+              LastKnownName="Verificar encuesta"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a6430548-bcc8-4699-af97-228b6c7304d7"
+        name="Cancelar cita"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7fc0bd62-2a56-4044-89dd-f137939d27f5">
+            <useCaseMoniker
+              Id="8e734ddb-46a2-4666-b7f5-9dd950682ce8"
+              LastKnownName="Autentificar"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+          <include
+            Id="37188d57-7665-4297-8a47-e6d8b5072586">
+            <useCaseMoniker
+              Id="ea7ac8d4-1662-4ac6-81b8-36830efd35da"
+              LastKnownName="Verificar encuesta"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="088545ae-68cb-4e72-b26f-f058eb09d77e"
+        name="Imprimir cita"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c4358915-ba40-4eba-95ba-8c2154eb1401"
+        name="Ingresar al sistema"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="fef8fd1b-814b-436e-90cd-b02c4f279722">
+            <useCaseMoniker
+              Id="e7236f88-4030-4f5e-b19e-684eeecdf677"
+              LastKnownName="autentificaciónr"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="4d27cfcf-03a2-4075-b13d-c131d29eda61"
+        name="*Especialista"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="02042fb9-d12b-474a-b10d-27f817b516e7"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Consultar citas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="80740088-971e-4494-b5bf-cc6fda367a51"
+              LastKnownName="Visualizar citas"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d3303b9-2cf3-4f2e-a42a-b78a806c1f13"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fe9a1994-2b95-4df3-8490-f737f7503160"
+                  name="Consultar citas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="85fd782c-a37d-4672-a461-6044ea33a819"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Ingresar al sistema"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c4358915-ba40-4eba-95ba-8c2154eb1401"
+              LastKnownName="Ingresar al sistema"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cc6a178e-3456-4ca2-b4d9-951d8754024e"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6df47b19-5bd7-407c-aa93-14572655f7f0"
+                  name="Ingresar al sistema"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f19a715c-0759-4cd4-8cd7-028253085f6b"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Realizar una consulta medica"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="9206f9b9-c85b-4b77-b088-65ad5a57acc0"
+              LastKnownName="Realizar una consulta médica"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7e2d967-c047-4a1b-9495-6de9f705a41e"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b00a23a2-bb95-4c2e-9be4-c63f42e81622"
+                  name="Realizar una consulta medica"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a4bdaa6c-fc57-4c74-a310-a214a34984de"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Ver historial clinico"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="727194a0-0a08-40d2-91f2-81fd87df9ecc"
+              LastKnownName="Ver historial clínico"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f42909bb-715b-482e-8198-41e0d7a5e986"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e186aa6-0be0-4e93-9ff9-277efa7a98cd"
+                  name="Ver historial clinico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d8928f4e-9992-47c3-89dd-a8ce89851431"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Médico"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="4d27cfcf-03a2-4075-b13d-c131d29eda61"
+              LastKnownName="*Especialista"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aaa98f91-1139-4abe-a6ca-3a21fb601886"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bd36358c-7553-4c7c-8ac9-a5ab1370164b"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d27aa9d3-9874-4f83-869b-e7b69590a74d"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Ver antecedentes"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="095e328d-7aef-480a-bce5-8d60fcdc2b96"
+              LastKnownName="Ver antecedentes"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bbbe1669-8283-4260-8e42-7798eba02acf"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3e104334-dd79-40b8-a844-86d71e1fe8d0"
+                  name="Ver antecedentes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1b7ee5eb-a001-4938-9a67-1df4c252d2c4"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Imprimir Historial"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e9ead1f8-57f7-4f95-bd92-befdf7c72589"
+              LastKnownName="Imprimir Historial"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2edd8b86-9e09-4b67-84dc-d13b0d15d3bb"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b3902408-02a5-40fe-8d80-4cca91646b10"
+                  name="Imprimir Historial"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6278b2af-9e6d-4ac5-a446-ba18e3450a6e"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Ver datos generales &#xD;&#xA;"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c7071b6a-2e0c-4d4b-a862-86801c5d7f3d"
+              LastKnownName="Ver datos generales &#xD;&#xA;"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="17b71a0c-7c66-421e-9561-a3e26d679204"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ef438332-ba8e-4d01-934a-0b76c88602fb"
+                  name="Ver datos generales &#xD;&#xA;"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c97fc764-c4c1-4daf-a988-2e7d431368bb"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Generar reporte"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2192fafa-1512-436e-9d7c-3325a1c33377"
+              LastKnownName="Generar reporte"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a9069663-fc11-4b3c-9054-4400b35f699c"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6a3452a3-ce64-4633-9175-78e6611d74d0"
+                  name="Generar reporte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bd2a3fa7-ed0d-4fb1-b20c-03673d1b5f68"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Cita de emergencia"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e801a6e6-12bf-4c07-a305-f3d0f917a98d"
+              LastKnownName="Cita de emergencia"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d891d927-82e8-4c66-b3f7-438f3336788b"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e1d282a0-e6d8-477f-b21e-9e815d3766ff"
+                  name="Cita de emergencia"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f62913d8-3fe3-490d-9fd6-8054b9d6b5a8"
+            isDerived="false"
+            sourceEndRoleName="Médico"
+            targetEndRoleName="Consultas especificas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ddf114f5-6a49-4745-8f5f-7dc17ece98ab"
+              LastKnownName="Consultas especificas"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0cc7d42f-1828-4f5d-b442-28c44d0592bc"
+                  name="Médico"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8363a460-6908-446d-a2e6-1c7ea6bca461"
+                  name="Consultas especificas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bd24d527-d9b8-4d4a-8b18-a6d4959fce10"
+        name="Generar reportes"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="11c78095-3ddd-4fca-b598-3353de0e6994"
+        name="Autentificación"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="40b10eb0-0480-4a37-8d69-9150a388015e"
+        name="Modificar personal"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="e5f0cc82-72b5-453d-a478-c25df0259951">
+            <useCaseMoniker
+              Id="11c78095-3ddd-4fca-b598-3353de0e6994"
+              LastKnownName="Autentificación"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4507a1c7-0965-4583-b4a0-2043fbc47bff"
+        name="Agregar personal"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="04530029-80b6-4013-9b49-7ccbed1b7f63">
+            <useCaseMoniker
+              Id="11c78095-3ddd-4fca-b598-3353de0e6994"
+              LastKnownName="Autentificación"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="45e8acdd-0e85-4852-af57-d16c25f58af7"
+        name="Eliminar personal"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="83cfa5d5-849d-434e-8dc3-cabeba10f4d1">
+            <useCaseMoniker
+              Id="11c78095-3ddd-4fca-b598-3353de0e6994"
+              LastKnownName="Autentificación"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8e734ddb-46a2-4666-b7f5-9dd950682ce8"
+        name="Autentificar"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ea7ac8d4-1662-4ac6-81b8-36830efd35da"
+        name="Verificar encuesta"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e9ead1f8-57f7-4f95-bd92-befdf7c72589"
+        name="Imprimir Historial"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="cc3c946b-2320-4ee6-9913-56988704cdba">
+            <useCaseMoniker
+              Id="d968e218-2e26-48a1-96bc-d72fb5d438b4"
+              LastKnownName="Selecionar 1 Alumno"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c7071b6a-2e0c-4d4b-a862-86801c5d7f3d"
+        name="Ver datos generales &#xD;&#xA;"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="eea76590-e483-4333-8cf9-0458a369ff30">
+            <useCaseMoniker
+              Id="d968e218-2e26-48a1-96bc-d72fb5d438b4"
+              LastKnownName="Selecionar 1 Alumno"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8cf0a557-1a4f-46e0-8a3a-c793171f7187"
+        name="Ingresar al sistema"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="2ece1b51-a8dc-4226-9c6c-9373bdfe1d62">
+            <useCaseMoniker
+              Id="8e734ddb-46a2-4666-b7f5-9dd950682ce8"
+              LastKnownName="Autentificar"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+          <include
+            Id="b66e2223-0f17-4ebf-aebf-6477c5574f30">
+            <useCaseMoniker
+              Id="ea7ac8d4-1662-4ac6-81b8-36830efd35da"
+              LastKnownName="Verificar encuesta"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e7236f88-4030-4f5e-b19e-684eeecdf677"
+        name="autentificaciónr"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d968e218-2e26-48a1-96bc-d72fb5d438b4"
+        name="Selecionar 1 Alumno"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="fd2ba614-075e-4ae6-96d9-0a2f332f123b">
+            <useCaseMoniker
+              Id="f2dab610-956a-4952-85eb-59b1a5e2d041"
+              LastKnownName="Estar en lista"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="80740088-971e-4494-b5bf-cc6fda367a51"
+        name="Visualizar citas"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="c4557177-2679-44de-b4e8-dc9724adf68c">
+            <useCaseMoniker
+              Id="c4358915-ba40-4eba-95ba-8c2154eb1401"
+              LastKnownName="Ingresar al sistema"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="095e328d-7aef-480a-bce5-8d60fcdc2b96"
+        name="Ver antecedentes"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="37328123-a278-4962-ad15-b0ef78b7fcbd">
+            <useCaseMoniker
+              Id="d968e218-2e26-48a1-96bc-d72fb5d438b4"
+              LastKnownName="Selecionar 1 Alumno"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="727194a0-0a08-40d2-91f2-81fd87df9ecc"
+        name="Ver historial clínico"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="665afc1a-be94-4246-aecb-b6ca6c1388f3">
+            <useCaseMoniker
+              Id="d968e218-2e26-48a1-96bc-d72fb5d438b4"
+              LastKnownName="Selecionar 1 Alumno"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9206f9b9-c85b-4b77-b088-65ad5a57acc0"
+        name="Realizar una consulta médica"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6d552f6b-94dc-4870-b874-f13358e6668d">
+            <useCaseMoniker
+              Id="d968e218-2e26-48a1-96bc-d72fb5d438b4"
+              LastKnownName="Selecionar 1 Alumno"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f2dab610-956a-4952-85eb-59b1a5e2d041"
+        name="Estar en lista"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="6abf91af-4c1b-4bd3-8fc5-0285f23708b2"
+        name="Administrador"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="bcfeaad8-6f61-4721-931b-b68512ff0785"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Agregar personal"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4507a1c7-0965-4583-b4a0-2043fbc47bff"
+              LastKnownName="Agregar personal"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="553f613b-65bf-4985-a6b8-ba49642dd4b9"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f13686bc-4919-43a8-8458-b6214f8e07fe"
+                  name="Agregar personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a1986576-74b7-4e6b-b4f2-13f3866a219a"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Modificar personal"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="40b10eb0-0480-4a37-8d69-9150a388015e"
+              LastKnownName="Modificar personal"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="53042e4d-7b2f-44ec-91ce-e6385f23a018"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8fe0bf56-b99a-4a5f-b689-cdfe62e69ede"
+                  name="Modificar personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="feac2505-d705-456c-be70-131c5b9e9a77"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Eliminar personal"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="45e8acdd-0e85-4852-af57-d16c25f58af7"
+              LastKnownName="Eliminar personal"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4399e2ab-e54d-4602-b25b-465a39406e35"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9032b8ee-20bc-4a43-acab-f2aaaa66e94d"
+                  name="Eliminar personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8ca3fdbe-b448-4ab9-a8c7-d57590844061"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Generar reportes"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bd24d527-d9b8-4d4a-8b18-a6d4959fce10"
+              LastKnownName="Generar reportes"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="42b73929-0f63-495e-8150-a5b9cf638d2a"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3dec1537-78da-453b-8a9d-a21e313ea5c1"
+                  name="Generar reportes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e72b31b6-66fa-4442-966e-e49b4f34b1b8"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Generar estadisticas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c86f9fe2-8e81-46ce-8dd5-0301e37225df"
+              LastKnownName="Generar reportes y estadisticas"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d77622e-a873-4c8a-9498-e0d144cf72fc"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0fe00b2b-5984-43a5-858f-b046640cf85a"
+                  name="Generar estadisticas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="818ce81f-d414-4233-8e24-e63eb9aae500"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Consultas especificas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2ecf30a6-f690-4a5e-b80d-719fd474c3e8"
+              LastKnownName="Consultas especificas"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1d0458c4-6d25-4895-a836-40d6b2a78c7f"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d4d3de01-1b22-4182-bd31-ea4b779b6b55"
+                  name="Consultas especificas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="736e35c7-b335-4dad-bf0e-cc9044b9c0b2"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Respaldos"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e192880e-ce66-4adc-b6db-e91faaf15ab4"
+              LastKnownName="Respaldos"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="66d16f78-a348-4686-87b5-fb0db4dc06d6"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5e39c94c-5e52-46ca-b355-bf1d0354f564"
+                  name="Respaldos"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2ecf30a6-f690-4a5e-b80d-719fd474c3e8"
+        name="Consultas especificas"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2192fafa-1512-436e-9d7c-3325a1c33377"
+        name="Generar reporte"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c86f9fe2-8e81-46ce-8dd5-0301e37225df"
+        name="Generar reportes y estadisticas"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="eff317c2-352f-4c90-89da-92779481a70f"
+        name="Persona"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="1344faf8-e34c-4dca-8ab0-bad2abea7e92"
+            name="Nombre"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a38d3136-25c9-4463-94a9-3b9283f7a0f0"
+            name="Apellidos"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f4d9fcc7-3b40-4a26-b9ee-f8cb56f0bdb7"
+            name="FechaNacimiento"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="04967292-70d8-44aa-a8d0-c030adc46090"
+                LastKnownName="date"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="914c93a8-7342-45b3-b408-72caba11ba72"
+            name="Telefono"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c7dcb52e-2afa-4530-8e62-545cefd9b6d9"
+                LastKnownName="Int"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="76507d2f-4d3e-435b-9577-13c61fb96331"
+            name="Genero"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ad7bbd47-a64a-4b5e-b2d3-f42b76b93908"
+            name="Matricula"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c7dcb52e-2afa-4530-8e62-545cefd9b6d9"
+                LastKnownName="Int"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3e90f72b-bf86-4995-ae63-8a74d4e3b192"
+            name="Email"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9b82d56b-1e05-47d4-919b-70be3cc1317f"
+            name="Contrasena"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="17fd6d4b-2550-4adb-943f-79af81781dea"
+            name="Foto"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9ff9c1f6-4b28-45ee-a4a2-ed67ec9be6ca"
+            name="Ingresar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4918361d-e6c8-48fc-a6c9-a9b42d4efbcb"
+                  name="usuario"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cb60874b-3a36-4c24-ab12-1d27f2121f18"
+                  name="contrasena"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="53f559c2-182b-4c51-97f8-9e04234724aa"
+            name="Agendar_Cita"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a7013a1b-8449-45d1-b6f1-a1b9636147e7"
+            name="Cancelar_Cita"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c579c691-e755-4488-95d6-95bfee08b168"
+            name="Consultar_cita"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e7c2685d-7f3c-4027-9e74-e02a14e0c366"
+            name="Imprimir_Cita"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="04967292-70d8-44aa-a8d0-c030adc46090"
+        name="date" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c7dcb52e-2afa-4530-8e62-545cefd9b6d9"
+        name="Int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8130a9a9-d5a6-48ee-a417-e3992144466c"
+        name="Alumno"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="7d9d5529-c711-4f6c-817b-1204ce24e210"
+            isSubstitutable="false">
+            <classMoniker
+              Id="eff317c2-352f-4c90-89da-92779481a70f"
+              LastKnownName="Persona"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </generalization>
+          <generalization
+            Id="0d839cb6-bebb-4820-9e2a-368cfb39d15e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="97dd7a32-9821-42ac-8c5e-5d4adaa2bf71"
+              LastKnownName="Consultas"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </generalization>
+          <generalization
+            Id="9dc54a4a-5dda-4277-8f92-23349a1acd4d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="6c479310-f878-4cf0-a14c-6f41c84167d7"
+              LastKnownName="Preguntas"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="e6739224-d855-4860-b3ec-9d0a2b1deeb1"
+            name="Carrera"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fbe63cff-0f6c-437e-9e1c-0c5a96d8a136"
+            name="Cuatrimestre"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="36624c4f-2045-4785-b2d8-aa7e864e8dc3"
+        name="Especialista"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="954fbe40-90c2-4ebe-837c-6d348ee86dad"
+            isSubstitutable="false">
+            <classMoniker
+              Id="eff317c2-352f-4c90-89da-92779481a70f"
+              LastKnownName="Persona"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </generalization>
+          <generalization
+            Id="7f6609ec-061f-40b5-a6ed-39347a8281c7"
+            isSubstitutable="false">
+            <classMoniker
+              Id="97dd7a32-9821-42ac-8c5e-5d4adaa2bf71"
+              LastKnownName="Consultas"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="0e388166-c69a-4beb-93cd-84be44b8334e"
+            name="Tipo_consulta"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3fa6b185-9799-4bcb-ad88-c3dea40250fd"
+            name="Visualizar_citas"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7dbb3e5e-27d0-4100-9ce9-d862f977dd36"
+            name="Realizar_consulta_medica"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="754008b8-4cb8-4d01-9d67-df0a78dcda67"
+            name="Ver_historial"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b30df173-ce6c-4d86-9790-55df1913dbf4"
+            name="Ver_antecedentes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="50fc79b8-429e-45e2-a0fc-68254a1a8768"
+            name="Ver_datosG"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d0ab1116-11f7-471c-b4df-9df6235e9310"
+            name="Generar_reporte"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b351d6cc-3d6e-4408-afe9-3736a61be54f"
+        name="Administrador"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="e4732717-c5a0-49e1-b468-4e3ddb7ab762"
+            isSubstitutable="false">
+            <classMoniker
+              Id="eff317c2-352f-4c90-89da-92779481a70f"
+              LastKnownName="Persona"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </generalization>
+          <generalization
+            Id="87d2b19f-3dee-4284-ab09-3e7a22792d7c"
+            isSubstitutable="false">
+            <classMoniker
+              Id="97dd7a32-9821-42ac-8c5e-5d4adaa2bf71"
+              LastKnownName="Consultas"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="afa1e529-e2d9-4c5e-a23b-d4bb91622a38"
+            name="Generar_Reporte"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d30326ad-c165-4a76-9278-b262f1eada6d"
+            name="Generar_Estadistica"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6c479310-f878-4cf0-a14c-6f41c84167d7"
+        name="Preguntas"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="381a1aa7-c526-4168-8dff-a324550695c1"
+            name="Pregunta1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="58e95329-8d2f-4f4c-9619-c9b3ed868faa"
+            name="Pregunta2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="21573986-9320-4c78-860c-33dd73a54167"
+            name="Pregunta3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7cf85683-1f0d-4cf3-b36c-1479c07c38bc"
+            name="Cuestionario"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="250dd63f-64c3-43f8-a51a-ddeae4eb8d70"
+            name="Verificar_cuestionario"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="97dd7a32-9821-42ac-8c5e-5d4adaa2bf71"
+        name="Consultas"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="50e3d9c6-cca1-4d18-80cf-ddd5ad58a360"
+            name="Ingresar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e192880e-ce66-4adc-b6db-e91faaf15ab4"
+        name="Respaldos"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a3405283-9ced-4b59-b0b5-96d3000ef003"
+        name="Respaldos1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="0b480b40-ce11-4040-8e08-bc8ca4823d93"
+        name="Personal"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="dc5bc811-31ad-4e17-984a-b1e7fc403bec"
+            isDerived="false"
+            sourceEndRoleName="Personal"
+            targetEndRoleName="Imprimir cita"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="088545ae-68cb-4e72-b26f-f058eb09d77e"
+              LastKnownName="Imprimir cita"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7e40e553-a1ff-45aa-a392-f2fe37a690d6"
+                  name="Personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d24636b3-a2ba-4173-ad9b-db1cc4308e15"
+                  name="Imprimir cita"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6b08798b-37f0-46b7-8ad6-165bd0b77329"
+            isDerived="false"
+            sourceEndRoleName="Personal"
+            targetEndRoleName="Llenar cuestionario"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1f553647-f694-42b1-8d5c-361385f360ec"
+              LastKnownName="Llenar cuestionario"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="df95026e-2f71-4253-a3f6-0ade3506946d"
+                  name="Personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8dd6a040-7cd3-42c7-b375-d3a9d244211a"
+                  name="Llenar cuestionario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ead469f9-dc4c-44bd-ba6b-2fe1117c7e53"
+            isDerived="false"
+            sourceEndRoleName="Personal"
+            targetEndRoleName="Cancelar cita"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a6430548-bcc8-4699-af97-228b6c7304d7"
+              LastKnownName="Cancelar cita"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2afdd1d7-1339-4e8b-a78c-84fb5522d5bb"
+                  name="Personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7eb9133b-5b83-4b77-a6ad-c17c430d1dda"
+                  name="Cancelar cita"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="97e0ebf2-0b69-4f6d-a564-2653734de7b2"
+            isDerived="false"
+            sourceEndRoleName="Personal"
+            targetEndRoleName="Ingresar al sistema"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8cf0a557-1a4f-46e0-8a3a-c793171f7187"
+              LastKnownName="Ingresar al sistema"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="21beac1b-2843-4c12-9ed3-cfd7e4143564"
+                  name="Personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5500a96a-0da3-4c99-9de6-def7cefc7424"
+                  name="Ingresar al sistema"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="eece574c-6f2e-4a18-bbcf-003806f62c8b"
+            isDerived="false"
+            sourceEndRoleName="Personal"
+            targetEndRoleName="Conultar cita"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f391188d-59a1-42a2-83d6-c0b3bd419fcf"
+              LastKnownName="Consultar cita"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b168b40f-d569-4132-8eda-4f6f32ba2634"
+                  name="Personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0f115633-5cad-4d79-a856-bd157147ac0a"
+                  name="Conultar cita"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8b58663e-2e1f-432b-92f3-3957d7d77114"
+            isDerived="false"
+            sourceEndRoleName="Personal"
+            targetEndRoleName="Agendar cita"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f62e9703-583e-4417-865e-7bc76fef97b8"
+              LastKnownName="Agendar cita"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="37e7e79e-1a58-4efb-b15c-75b501ad7803"
+                  name="Personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2e4cddec-c6b5-4e18-a656-c7a52b237bc4"
+                  name="Agendar cita"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e5e83154-f880-469e-8153-18abb5384527"
+            isDerived="false"
+            sourceEndRoleName="Personal"
+            targetEndRoleName="Chat "
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d857bb82-161c-412a-b887-5ec4ee5bad3d"
+              LastKnownName="Chat "
+              LastKnownLocation="Hospital_Diagramas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="39e94394-0a90-4be1-8a4a-5836594f6df6"
+                  name="Personal"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a5f2e87-4efe-47cb-bf55-05ae6bdee326"
+                  name="Chat "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9e2654d6-0a55-4e02-ac13-19ace3db8554"
+        name="Autentificación"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="b1c33303-3256-4114-a5de-c57392eadd3e">
+            <useCaseMoniker
+              Id="ea7ac8d4-1662-4ac6-81b8-36830efd35da"
+              LastKnownName="Verificar encuesta"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e801a6e6-12bf-4c07-a305-f3d0f917a98d"
+        name="Cita de emergencia"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ddf114f5-6a49-4745-8f5f-7dc17ece98ab"
+        name="Consultas especificas"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d44449e8-0371-4872-a68a-38080a3008bb"
+        name="Personal"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="b2481c26-f75b-4528-a97f-0418c10eb438"
+            isSubstitutable="false">
+            <classMoniker
+              Id="eff317c2-352f-4c90-89da-92779481a70f"
+              LastKnownName="Persona"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </generalization>
+          <generalization
+            Id="4f0b0632-ed84-4799-97d5-b6599a65fb98"
+            isSubstitutable="false">
+            <classMoniker
+              Id="6c479310-f878-4cf0-a14c-6f41c84167d7"
+              LastKnownName="Preguntas"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </generalization>
+          <generalization
+            Id="f599145e-2b2f-4c46-aab2-aaceebf1966f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="97dd7a32-9821-42ac-8c5e-5d4adaa2bf71"
+              LastKnownName="Consultas"
+              LastKnownLocation="Hospital_Diagramas.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="ab92f598-b9f9-4b91-9262-40e5f464e5dd"
+            name="Area"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="70e8d921-656c-4f24-9051-b4dbb4966fa6"
+            name="Turno"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Hospital_Diagramas.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2d8237af-a8e2-4310-ac73-ed218729e3e9"
+        name="Administrar carreras"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d857bb82-161c-412a-b887-5ec4ee5bad3d"
+        name="Chat "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

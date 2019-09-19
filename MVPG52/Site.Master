@@ -1,0 +1,349 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MVPG52.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> Sistema compensatorio</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/bootstrap.css" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!--Import materialize.css-->
+    <link href="Content/materialize.min.css" rel="stylesheet" />
+    <%--<link href="Content/bootstrap.min.css" rel="stylesheet" />--%>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+
+
+
+<body>
+    <style type="text/css">
+        img {
+            width: 100%;
+        }
+
+        button {
+            width: auto;
+            height: auto;
+        }
+
+        .parallax-container {
+            height: 150px;
+        }
+
+
+        .material-icons {
+            color: red;
+            font-size: 50px;
+            text-align: left;
+        }
+
+        .pin-top {
+            position: relative;
+        }
+
+        .pin-bottom {
+            position: relative;
+        }
+
+        .pinned {
+            position: fixed;
+        }
+
+        html, body, .block {
+            height: auto;
+        }
+
+        body {
+            background-color: #e2e2e2;
+        }
+    </style>
+
+    <form runat="server">
+
+
+
+        <%-- Menu deslizable --%>
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="userView">
+                    <div class="background">
+                        <img src="imag/master/fondoRojo.jpg" />
+                    </div>
+                    <a href="#!user">
+                        <img class="circle" src="imag/Roles/alumno.png"></a>
+                    <a href="#!name"><span class="white-text name">
+
+
+                        <asp:Label ID="MenuNombre" runat="server" Text="Nombre"></asp:Label></span></a>
+                    <asp:Label ID="TipoUsuario" runat="server" Text="Tipo" ForeColor="White" Font-Bold="True" Font-Underline="True"></asp:Label>
+
+                </div>
+                <asp:Panel ID="PanelBotonesAlumno" runat="server" Visible="false">
+                    <%-- Botones para el alumno --%>
+
+                    <div>
+
+                        <li><a href="Default.aspx"><i class="material-icons" style="float: inherit">perm_identity</i>Inicio</a></li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+
+                        <li>
+                            <asp:LinkButton ID="LinkButtonNuevaCitaAlumno" runat="server" OnClick="LinkButton1_Click"><i class="material-icons" style="float: inherit">note_add</i>Nueva Consulta</asp:LinkButton></li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButtonConsultarCitaAlumno" runat="server" OnClick="LinkButton1_Click1"><i class="material-icons" style="float: inherit">pageview</i>Consultar/Cancelar Cita</asp:LinkButton></li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButtonCuestionarioAlumno" runat="server" OnClick="LinkButton2_Click1"><i class="material-icons" style="float:inherit" >folder_shared</i>Cuestionario </asp:LinkButton>
+                        </li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButtonChat" runat="server"><i class="material-icons" style="float:inherit" >question_answer</i>Chat </asp:LinkButton>
+                        </li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButtonSALIR_Click"><i class="material-icons" style="float:inherit" >email</i>Salir </asp:LinkButton></li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+
+
+                    </div>
+                </asp:Panel>
+                <asp:Panel ID="PanelBotonesEspecialista" runat="server" Visible="false">
+                    <div>
+                        <li><a href="Default.aspx"><i class="material-icons" style="float: inherit">perm_identity</i>Inicio</a></li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButtonAgendaCitas" runat="server" OnClick="LinkButtonAgendaCitas_Click"><i class="material-icons" style="float: inherit">today</i>Agenda Citas</asp:LinkButton></li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+
+                        <li>
+                            <asp:LinkButton ID="LinkButton" runat="server" OnClick="LinkButton_Click"><i class="material-icons" style="float: inherit">assignment_ind</i>Cita Rápida</asp:LinkButton></li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+
+
+                        <li>
+                            <asp:LinkButton ID="LinkButtoHistorialClinico" runat="server" OnClick="LinkButtoHistorialClinico_Click"><i class="material-icons" style="float: inherit">pageview</i>Historial Clinico</asp:LinkButton></li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButtonHistorialCitas" runat="server" OnClick="LinkButtonHistorialCitas_Click"><i class="material-icons" style="float:inherit" >view_list</i>Historial Citas </asp:LinkButton></li>
+                        <li>
+
+                            <div class="divider"></div>
+                        </li>
+
+                        <li>
+                            <asp:LinkButton ID="LinkButtonArchivos" runat="server" OnClick="LinkButtonArchivos_Click"><i class="material-icons" style="float:inherit" >attach_file</i>Archivos comúnes </asp:LinkButton></li>
+                        <li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButtonChatMedico" runat="server"><i class="material-icons" style="float:inherit" >email</i>Chat </asp:LinkButton></li>
+                        <li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButtonSALIR" runat="server" OnClick="LinkButtonSALIR_Click"><i class="material-icons" style="float:inherit" >settings_power  </i>Salir </asp:LinkButton></li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+
+                    </div>
+                </asp:Panel>
+
+                <asp:Panel ID="Paneladmin" runat="server" Visible="false">
+                    <li>
+                        <asp:LinkButton ID="LinkButton2" runat="server"><i class="material-icons" style="float:inherit" >view_list</i>Reportes </asp:LinkButton></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButtonSALIR_Click"><i class="material-icons" style="float:inherit" >trending_up </i>Salir </asp:LinkButton></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+
+                </asp:Panel>
+                <%-- Botones para el alumno FIN--%>
+        </ul>
+        <div class="container modal-content #b71c1c red darken-4">
+            <div class="row">
+                <div class="col s2">
+                    <a href="#" data-activates="slide-out" class="button-collapse "><i class="material-icons center-align #ffffff " style="font-size: 40px; margin: auto">menu</i></a>
+                </div>
+                <div class="col s10">
+                    <!-- Prom Content 2 goes here -->
+                    <div>
+                        <h1 class="white-text big text-darken-2 valign-wrapper brand-logo center">Sistema de Servicios de Salud
+                            <!-- Logo menu -->
+                            <a class="col s2 m2 offset-m2 16 offset-l5">
+                                <u class="lighten-5 z-depth-5">
+                                    <u class="col s12">
+                                        <!-- s8 para cambiar el tamaño del logo  -->
+                                        <img src="IMAG/universidad/corazon.png" alt="" class=" responsive-img">
+                                    </u>
+                                </u>
+                            </a>
+                            <!-- Logo menu  -->
+                        </h1>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <%-- Aviso Legal --%>
+        <div id="aviso" class="modal bottom-sheet">
+            <div class="modal-content">
+                <h4>Aviso de Privacidad</h4>
+                <p>
+                    Los datos personales recabados serán protegidos y serán incorporados y tratados en este formulario de contacto, con fundamento en los artículos 37, 38 y 42 de la Ley de Transparencia y Acceso a la Información Pública Gubernamental para el Estado de Hidalgo así como los artículos 24 y 25 de su Reglamento cuya finalidad es recibir quejas, sugerencias, observaciones, o cualquier otro tipo de comentario dirigido a esta secretaria o respecto de los contenidos publicados en este sitio y podrán ser transmitidos a la(s) persona(s) u organismo(s) que está dirigida o que por la naturaleza de la solicitud deba involucrarse con la finalidad de dar respuesta o gestionar un conjunto de actividades para dar respuesta a la solicitud recibida en este formulario, además de otras transmisiones previstas en la Ley.
+                     La Universidad Politécnica de Tulancingo (UPT) es la responsable del funcionamiento de este sistema informático. Así mismo el titular de los datos personales podrá ejercer su derecho a conocer, corregir, actualizar o suprimir la información. Calle Ingenierías # 100. Col. Huapalcalco, Tulancingo, Hidalgo, México. C.P. 43629, Teléfono: 01(775) 75 5 82 02
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Regresar</a>
+            </div>
+        </div>
+        <%-- Aviso Legal --%>
+
+        <%-- Baner bajo --%>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <footer class="page-footer #b71c1c red darken-4">
+                <div>
+                    <div class="row">
+                        <div class="col s2 center-align">
+                            <img src="imag/universidad/logoUPT.png" style="width: 70%" />
+                        </div>
+                        <div class="col l4 s4">
+                            <h4 class="white-text">Sistemas Compensatorios</h4>
+                            <p class="grey-text text-lighten-4">© Universidad Politécnica de Tulancingo.  Calle Ingenierías # 100. Col. Huapalcalco, Hidalgo, México C.P. 43629, Teléfono: 01(775) 75 5 82 02.</p>
+                        </div>
+                        <div class="col l2 offset-l1 s1">
+                            <h4 class="white-text">Enlaces</h4>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3" href="http://www.upt.edu.mx/">upt.edu.mx</a></li>
+                                <li><a class="grey-text text-lighten-3" href="http://201.116.38.19/conect_uptvxxi/default.asp">Conect</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#aviso">Aviso de privacidad</a></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="col s2 center-align">
+                                <img src="imag/universidad/logo.png" style="width: 90%" class="responsive-img" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2017 Universidad Politécnica de Tulancingo
+            <a class="grey-text text-lighten-4 right" href="/Desarroladores.aspx">Webmasters</a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </form>
+
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.tooltipped').tooltip({ delay: 50 });
+        });
+
+
+        $(document).ready(function () {
+            //código que queremos ejecutar
+            $('.pushpin-demo-nav').each(function () {
+                var $this = $(this);
+                var $target = $('#' + $(this).attr('data-target'));
+                $this.pushpin({
+                    top: $target.offset().top,
+                    bottom: $target.offset().top + $target.outerHeight() - $this.height()
+                });
+            });
+            $('.target').pushpin({
+                top: 0,
+                bottom: 1000,
+                offset: 0
+            });
+            $('.carousel').carousel();
+            $('select').material_select();
+            $('.parallax').parallax();
+            $('.tooltipped').tooltip({ delay: 10 });
+            $(".button-collapse").sideNav();
+            $('.button-collapse').sideNav({
+                menuWidth: 350, // Default is 300
+                edge: 'left', // Choose the horizontal origin
+                closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                draggable: true, width: 40, height: 30
+                // Choose whether you can drag to open on touch screens
+            });
+            $('.modal').modal();
+        });
+
+
+    </script>
+    <script type="text/javascript">
+        function quitarmensaje() {
+            $('.tooltipped').tooltip('remove');
+        }
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+
+        $(document).ready(function () {//Agendar citas opciones
+            $('select').material_select();
+        });
+
+
+
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Cadena1-Web.config Connection String" description="Cadena1 Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=DESKTOP-VDTP7R6; Initial Catalog=libros ;User ID=sa;Password=octavio123;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\octav\\Desktop\\A_Hospital\\MVPG52\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Cadena1']/@connectionString" />
+  </parameter>
+  <parameter name="Cadena3-Web.config Connection String" description="Cadena3 Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=DESKTOP-VDTP7R6; Initial Catalog=DB_Hospital ;User ID=sa;Password=octavio123;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\octav\\Desktop\\A_Hospital\\MVPG52\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Cadena3']/@connectionString" />
+  </parameter>
+  <parameter name="Hospital-Web.config Connection String" description="Hospital Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=amv.database.windows.net; Initial Catalog=A_Hospital ;User ID=octavio;Password=nora1230..;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\octav\\Desktop\\A_Hospital\\MVPG52\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Hospital']/@connectionString" />
+  </parameter>
+</parameters>

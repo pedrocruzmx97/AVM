@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="7b78c592-b48f-44d3-9f6c-4180abac99d2" name="Casos_de_uso" linkedPackageId="ca7a1643-2c7f-4897-9492-246cbdb7426c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="e19c1056-0128-4d56-aa5c-0312ad2b04bd">
+      <elementDefinition Id="76c9d7ba-a06f-490f-b428-6c441481b947" />
+      <body>
+licenciatura
+maestria
+doctorado
+Personal
+Administrativo
+Profesores</body>
+    </comment>
+    <comment Id="2d997a31-6099-4aa3-ab84-304f88e61905">
+      <elementDefinition Id="ffbc5952-c741-484b-9b82-574ed81bc7d0" />
+      <body>*Médico general
+*Psicólogo
+*Dentista</body>
+    </comment>
+    <comment Id="2da218dd-4338-4704-878a-c5fa12b06fe7">
+      <elementDefinition Id="117ea416-fb27-42bc-bc98-d529a125f5a4" />
+      <body>Encargado</body>
+    </comment>
+  </ownedCommentsInternal>
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="e9997328-0ef5-4e43-b477-534c8b4bca01" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="33d6ebc6-9087-459b-a102-f3d8f7c24924" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="3687e7d3-ab2d-4007-b9b0-b7fe261b210b">
+          <propertyInstance Id="54e9f972-a3c1-4261-a2fa-b7dace59d12d" name="BaseName">
+            <elementDefinition Id="3a32569f-4b83-47c3-b3ba-a2a4622a3f82" />
+          </propertyInstance>
+          <elementDefinition Id="bb2d0eff-751f-48a0-be90-0139a6e43242" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="13010ee7-6a65-4afb-979c-540a7bf9f649">
+          <propertyInstance Id="2b9edcdc-6787-4b65-98cb-352df92e3c57" name="ClrAttributes">
+            <elementDefinition Id="6ca4db4b-473d-4190-a04f-2ac3b9741b88" />
+          </propertyInstance>
+          <elementDefinition Id="36ff0a68-2a34-4c0d-868d-ccadefe5926b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="03a538b6-f345-41e3-9cfa-36c6ae055ae1">
+          <propertyInstance Id="6deeda1b-0e7a-4fcf-bd6c-46535b7c2d26" name="Usings">
+            <elementDefinition Id="1f10f89e-9c94-4d88-bf48-c79ef4bfa356" />
+          </propertyInstance>
+          <elementDefinition Id="6326687b-c987-4e17-9940-8d27ed56224b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="0cdee097-7fb0-4ebb-b015-3e1f131a324e" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="35b0bc45-6bb2-49ae-862d-7a490cfa0970" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b682c362-614d-470b-8e92-dc3dae954dcc">
+          <propertyInstance Id="ceb6cc85-5fc0-414a-8495-ebf614b7001d" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="8e4407a6-1f48-46a2-9485-6c06604762b8" />
+          </propertyInstance>
+          <elementDefinition Id="0917d4b9-b33b-4415-b80b-a24ac831476c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="148e7b8a-11f9-4f67-8642-b966b7f34d98">
+          <propertyInstance Id="3eab6db4-1749-434c-b265-4bedd02c96f3" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="240386ec-7b97-4818-8ba7-abcf1a0c7c8e" />
+          </propertyInstance>
+          <elementDefinition Id="539da814-7925-4401-9c63-4b58a6d84d19" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="6b98b66d-efb4-4ff7-b943-d25fc04bb3d5">
+          <propertyInstance Id="ff9ccd78-49ab-4fba-a4a0-da0ae48f2cbd" name="ProjectPath" value="ClassTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj|EnumTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj|InterfaceTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj|StructTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj">
+            <elementDefinition Id="349258c7-69f4-45a1-80bb-cbb21f244a16" />
+          </propertyInstance>
+          <elementDefinition Id="fc09f8e2-1a80-4280-9586-5a61ae3c49cd" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="1680abaa-a4e8-474c-8c5b-d970cef23c24">
+          <propertyInstance Id="48bb30b7-4722-448e-ae87-aac1f366ba7c" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="dcd63675-b2a4-4fc5-9f1b-63dd0a5536a3" />
+          </propertyInstance>
+          <elementDefinition Id="f1488310-6c3e-44eb-b5a6-dc0a30fa1955" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="42bc5c1a-48e0-4621-9703-0af7d0b2f7a6">
+          <propertyInstance Id="0a2edfca-0f3f-4ebd-a3f5-8695d2fc3a3b" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="3fc67206-f3fb-4bb9-8c26-df25357bafae" />
+          </propertyInstance>
+          <elementDefinition Id="e87f5030-26f9-4b49-9436-1a53bae710f0" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5b39be47-2e20-49ea-982f-1569cf957a2a">
+          <propertyInstance Id="f33faba2-bda4-423b-bed9-43d5232e2310" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="763225e1-0a5c-47ae-848c-60584f3fe570" />
+          </propertyInstance>
+          <elementDefinition Id="2be39a5b-f099-4194-9d8b-f3f5f4db7450" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="2fa804d6-f42c-4dde-aa0d-6dc8a0846017">
+          <propertyInstance Id="80f46894-f67e-4baf-bbe0-31c8965fa949" name="Parameters">
+            <elementDefinition Id="f1ca5284-e1ff-4950-8350-109ea6811409" />
+          </propertyInstance>
+          <elementDefinition Id="6ec1ca8e-64d6-4aec-b3e4-642f6d264527" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="e5d26c72-3b3c-4567-8433-a90afbb6215e" name="*Usuario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="28fe7c27-5f99-46a7-90a3-fb40206dd572" />
+        <targetEnds>
+          <association Id="8cb2dec6-234d-4faf-b6c1-c0e79bbd3128" isDerived="false" sourceEndRoleName="Alumno" targetEndRoleName="Agendar cita" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="84750bd6-bbe2-45aa-b24b-5a6da93402b3" LastKnownName="Agendar cita" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7668ad78-5089-4503-aac2-1c39d593a752" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5e07b49f-4b75-4703-a5d2-c88b7b96c64c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb998400-48e4-469f-be7e-fea6102133a0" name="Agendar cita" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b4e11863-8c14-433a-aa40-10c1c0195c8b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dcde66fc-c142-4528-b17e-c03f1e120bf8" />
+          </association>
+          <association Id="06983d3e-1b14-4b8c-a4e8-04f05e864c00" isDerived="false" sourceEndRoleName="Alumno" targetEndRoleName="Alumno" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="e5d26c72-3b3c-4567-8433-a90afbb6215e" LastKnownName="*Usuario" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dc7a50cd-1f6e-4626-b44b-15565fe76ec2" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="418a9714-4a72-441a-be31-432e56fa8182" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9ac3e512-6774-46db-bc00-282c0aaf718f" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a5edb444-cb6d-462e-899f-b5638c75ef04" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="51074488-2aae-45e3-905d-0d9651e8b35f" />
+          </association>
+          <association Id="f83ec02e-ccd1-4717-a59b-c6205307378e" isDerived="false" sourceEndRoleName="Alumno" targetEndRoleName="Conultar cita" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b85495c5-8c01-4312-b9b9-218852038119" LastKnownName="Consultar cita" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d9bdc14-7b9d-468e-870e-2168d1d4bd56" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2f801487-d868-428a-b7de-cdd9580b351d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c4927141-02cc-42c2-b061-f6d4ec570f22" name="Conultar cita" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b0cb0beb-2bfd-4287-a6b9-d4de42e79b8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bb7d6474-0662-4fc8-ba7e-f104ac31f26e" />
+          </association>
+          <association Id="8f78dcd8-cc13-4026-aaec-30fa04b9b239" isDerived="false" sourceEndRoleName="Alumno" targetEndRoleName="Cancelar cita" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7a55066e-85f5-414e-947e-dc53f34738d3" LastKnownName="Cancelar cita" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="10aa3cb5-196b-4433-bc67-74c7fbeea1f4" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1411227d-9a98-495c-9843-477e24c6f43d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a7bfb583-d092-41ff-9dc8-6eaa57e18fe3" name="Cancelar cita" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="222deb15-a368-4cc7-92b7-f2b1883b6164" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="86fc0a93-a04a-4369-8b1e-d24502240a2d" />
+          </association>
+          <association Id="3c98b4a1-03c8-43ab-926d-44a596735cf4" isDerived="false" sourceEndRoleName="Alumno" targetEndRoleName="Ingresar al sistema" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b0a74645-115e-42ba-ad86-115937d27355" LastKnownName="Ingresar al sistema" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0366049f-b57b-4f3d-b227-ed0e95e47cc1" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ab8265d9-68b0-4115-9691-2465c12f6c53" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3a0f4c91-6015-465f-b034-0fe9ff95bcfa" name="Ingresar al sistema" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aaa87795-515d-43a9-9d91-bb71cb1508e3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3bc3c6a3-7fda-4280-a635-b2002f5d4e51" />
+          </association>
+          <association Id="b49e1a65-0220-4a75-a95a-967bccb9eb08" isDerived="false" sourceEndRoleName="Alumno" targetEndRoleName="Llenar cuestionario" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ef95d963-61a4-4a01-8719-9e61d777361b" LastKnownName="Llenar cuestionario" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c77e22ae-6aab-48a1-bd2a-bb3e81fb0887" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d354ef31-2f04-4755-a7d7-f47defd8a4bc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0ed9bbe-b45e-4b5e-956e-33f25af3e78b" name="Llenar cuestionario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cba2cd29-997b-42ff-ad0d-d0150997ef7d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="122a44ed-7025-429c-82a4-6c36fad1d50e" />
+          </association>
+          <association Id="e28a8d90-4996-44e1-8151-8164650c6243" isDerived="false" sourceEndRoleName="Alumno" targetEndRoleName="Imprimir cita" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="84e43a62-8929-4c9d-9808-8d1a441622d2" LastKnownName="Imprimir cita" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44782871-043e-4040-9b8a-f1a3fc2287fb" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7745d47f-4452-4699-b7d6-04503fb22009" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1f507eb5-10be-44be-9999-59c00fb6eac7" name="Imprimir cita" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="16497239-1537-4899-8e84-c55a174a4026" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9da1cbae-07a9-434a-bd02-deaf4dcc8843" />
+          </association>
+          <association Id="053671e4-732e-475a-a109-5ed7d592d2d4" isDerived="false" sourceEndRoleName="Alumno" targetEndRoleName="Alumno" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="e5d26c72-3b3c-4567-8433-a90afbb6215e" LastKnownName="*Usuario" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cc75c6e2-486a-4156-b41e-8000bd5bfed1" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="02ab6176-4233-4f8e-ad23-b0948a848ece" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5badc0ee-0278-467c-9bed-ccbc57b47f1f" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1ee929cb-0fe7-480e-a918-2274b2a7aa18" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="677ea69f-e20e-483f-ae98-de51436e0c35" />
+          </association>
+          <association Id="4972bd67-4f89-446b-a76b-445b7e140ca5" isDerived="false" sourceEndRoleName="Alumno" targetEndRoleName="Chat " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="db3afc6e-6a25-4fbd-b865-4017d1a1c27f" LastKnownName="Chat " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="56cff9a4-0968-468c-a2a9-118cac67942c" name="Alumno" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b07d3830-7459-4eb5-a5c6-9f66cbc72139" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="37ae5d50-b943-441b-a350-e81a89fcff47" name="Chat " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e808ce0f-7db2-49c0-baea-7655b65323ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d491d31a-525f-4b6f-9567-67c03152b2a3" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ef95d963-61a4-4a01-8719-9e61d777361b" name="Llenar cuestionario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1f553647-f694-42b1-8d5c-361385f360ec" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="84750bd6-bbe2-45aa-b24b-5a6da93402b3" name="Agendar cita" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f62e9703-583e-4417-865e-7bc76fef97b8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b85495c5-8c01-4312-b9b9-218852038119" name="Consultar cita" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f391188d-59a1-42a2-83d6-c0b3bd419fcf" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7a55066e-85f5-414e-947e-dc53f34738d3" name="Cancelar cita" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a6430548-bcc8-4699-af97-228b6c7304d7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="84e43a62-8929-4c9d-9808-8d1a441622d2" name="Imprimir cita" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="088545ae-68cb-4e72-b26f-f058eb09d77e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8877d2f9-57fc-40a9-b82a-30f73c806523" name="Ingresar al sistema" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c4358915-ba40-4eba-95ba-8c2154eb1401" />
+        <additions>
+          <include Id="c32da430-a3cd-4ef2-be93-2f4fab306c18">
+            <useCaseMoniker Id="ea5e198f-08b6-466b-8b6e-7cc265f9f2aa" LastKnownName="autentificaciónr" />
+            <elementDefinition Id="fef8fd1b-814b-436e-90cd-b02c4f279722" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="53bf3869-644c-4a12-96fb-96bc79936415" name="*Especialista" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4d27cfcf-03a2-4075-b13d-c131d29eda61" />
+        <targetEnds>
+          <association Id="a3fca8b3-babe-40fa-af0d-719c96fe8c33" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Consultar citas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="eecc476d-cc35-4a60-8692-ebf39ba71b8e" LastKnownName="Visualizar citas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="02812456-3f28-40f0-97c5-01718d28c0a2" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7d3303b9-2cf3-4f2e-a42a-b78a806c1f13" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c0fa4651-3a5e-4afd-84fe-18798de89fba" name="Consultar citas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fe9a1994-2b95-4df3-8490-f737f7503160" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="02042fb9-d12b-474a-b10d-27f817b516e7" />
+          </association>
+          <association Id="b20c8293-f2bc-4e03-acf4-8c95d0747062" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Ingresar al sistema" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8877d2f9-57fc-40a9-b82a-30f73c806523" LastKnownName="Ingresar al sistema" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b47ac99-23f9-4d4a-b63f-9b6370ac5980" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cc6a178e-3456-4ca2-b4d9-951d8754024e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="826bd37e-881d-4547-82ec-8614de99c48c" name="Ingresar al sistema" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6df47b19-5bd7-407c-aa93-14572655f7f0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="85fd782c-a37d-4672-a461-6044ea33a819" />
+          </association>
+          <association Id="ccf289b2-f0fc-4ce5-a9d2-0df458c28326" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Realizar una consulta medica" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="886efd52-d26d-4183-a917-c4575a98311b" LastKnownName="Realizar una consulta médica" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a790660f-16e6-401d-98a6-3083ce923dfe" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c7e2d967-c047-4a1b-9495-6de9f705a41e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b77c181b-9fbb-4232-9fd7-b9727eba8bd5" name="Realizar una consulta medica" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b00a23a2-bb95-4c2e-9be4-c63f42e81622" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f19a715c-0759-4cd4-8cd7-028253085f6b" />
+          </association>
+          <association Id="2af3abe7-d92c-470e-9475-ee7efb53c1c3" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Ver historial clinico" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c5a755de-546a-4626-9fbe-3591e2e94f12" LastKnownName="Ver historial clínico" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5295a7c7-a323-47c5-a4e2-07a9fa63f2e2" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f42909bb-715b-482e-8198-41e0d7a5e986" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="017e69f0-c0b4-4ac2-ba8c-f801768a5b74" name="Ver historial clinico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4e186aa6-0be0-4e93-9ff9-277efa7a98cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a4bdaa6c-fc57-4c74-a310-a214a34984de" />
+          </association>
+          <association Id="b28344f5-15d0-4acd-af56-3b9b5354178c" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Médico" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="53bf3869-644c-4a12-96fb-96bc79936415" LastKnownName="*Especialista" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="15ffb8c3-b5de-4f75-8ed7-15e31085e117" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="aaa98f91-1139-4abe-a6ca-3a21fb601886" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f276225-cf02-4127-b4fa-29ad28d41b68" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bd36358c-7553-4c7c-8ac9-a5ab1370164b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d8928f4e-9992-47c3-89dd-a8ce89851431" />
+          </association>
+          <association Id="d8cc2704-5cea-465d-ae65-9add8777a18b" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Ver antecedentes" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="985f83c5-5d18-4699-b489-2e1b5c99af5b" LastKnownName="Ver antecedentes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92385c8c-6bc7-4e82-807c-8db799ba6ea0" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bbbe1669-8283-4260-8e42-7798eba02acf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7da49983-a273-4ad4-82de-f192682e2b05" name="Ver antecedentes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3e104334-dd79-40b8-a844-86d71e1fe8d0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d27aa9d3-9874-4f83-869b-e7b69590a74d" />
+          </association>
+          <association Id="6698de1f-ede5-4201-9cfa-17bb2e0d99ab" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Imprimir Historial" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="13f192ec-57d0-4b2e-a325-7631a1cb3d75" LastKnownName="Imprimir Historial" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="649ebaf2-2128-4bf5-b4b0-6dc48fce0140" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2edd8b86-9e09-4b67-84dc-d13b0d15d3bb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9005f379-eceb-4650-9347-4ce939ac145f" name="Imprimir Historial" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b3902408-02a5-40fe-8d80-4cca91646b10" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1b7ee5eb-a001-4938-9a67-1df4c252d2c4" />
+          </association>
+          <association Id="9af3ea26-39fd-494b-bce6-c8eda405654b" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Ver datos generales &#xD;&#xA;" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b6489d51-33a1-4a3c-be51-c04a481e0456" LastKnownName="Ver datos generales &#xD;&#xA;" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e66c4e92-245e-4456-ab48-777a2de932b3" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="17b71a0c-7c66-421e-9561-a3e26d679204" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2e47dbb6-1b95-4269-a13c-54262e67293b" name="Ver datos generales &#xD;&#xA;" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ef438332-ba8e-4d01-934a-0b76c88602fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6278b2af-9e6d-4ac5-a446-ba18e3450a6e" />
+          </association>
+          <association Id="09d6ebfe-5529-44a7-b208-bedebece9ccd" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Generar reporte" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3a5e3ac0-e460-470f-b0b1-5a4b2b060098" LastKnownName="Generar reporte" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="26c8a3ff-b420-4d1d-93eb-d362c12995bb" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a9069663-fc11-4b3c-9054-4400b35f699c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="867f3c2f-7d86-4fdc-b137-7e2e7bd02341" name="Generar reporte" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6a3452a3-ce64-4633-9175-78e6611d74d0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c97fc764-c4c1-4daf-a988-2e7d431368bb" />
+          </association>
+          <association Id="e723e9be-7c1a-4d16-8705-65eabd9138b1" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Cita de emergencia" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="437321cb-254c-4336-a2b1-aafa1e0e4396" LastKnownName="Cita de emergencia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1581e41a-5e94-49b0-b7e9-38172dea5821" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d891d927-82e8-4c66-b3f7-438f3336788b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b136f484-48a5-4da4-80ed-611ed6d7ec30" name="Cita de emergencia" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e1d282a0-e6d8-477f-b21e-9e815d3766ff" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bd2a3fa7-ed0d-4fb1-b20c-03673d1b5f68" />
+          </association>
+          <association Id="86971714-ddf2-43ba-944f-bd2607c0fc30" isDerived="false" sourceEndRoleName="Médico" targetEndRoleName="Consultas especificas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3a75082f-88ca-4976-8d53-39eed01772d7" LastKnownName="Consultas especificas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce1e2027-4709-4070-bb53-f61426dd462c" name="Médico" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0cc7d42f-1828-4f5d-b442-28c44d0592bc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="513c8f4c-f581-434f-bd2d-a59f81f7a454" name="Consultas especificas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8363a460-6908-446d-a2e6-1c7ea6bca461" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f62913d8-3fe3-490d-9fd6-8054b9d6b5a8" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="62081ddd-3b04-4997-ac45-a5cc70ae2cc2" name="Autentificación" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="11c78095-3ddd-4fca-b598-3353de0e6994" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2519d0bc-f570-4007-95df-a2f2d3fd634e" name="Modificar personal" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="40b10eb0-0480-4a37-8d69-9150a388015e" />
+        <additions>
+          <include Id="1bf87b65-7dd3-46b5-ad4f-54a35cbb808d">
+            <useCaseMoniker Id="62081ddd-3b04-4997-ac45-a5cc70ae2cc2" LastKnownName="Autentificación" />
+            <elementDefinition Id="e5f0cc82-72b5-453d-a478-c25df0259951" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5658f93a-e990-46b0-ad92-66e6a811d31a" name="Agregar personal" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4507a1c7-0965-4583-b4a0-2043fbc47bff" />
+        <additions>
+          <include Id="71a04e9d-7ee2-42fd-84f8-95509003d20a">
+            <useCaseMoniker Id="62081ddd-3b04-4997-ac45-a5cc70ae2cc2" LastKnownName="Autentificación" />
+            <elementDefinition Id="04530029-80b6-4013-9b49-7ccbed1b7f63" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6d273078-37f3-4a68-9263-aaf79264d433" name="Eliminar personal" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="45e8acdd-0e85-4852-af57-d16c25f58af7" />
+        <extendedCases>
+          <extend Id="04a0b78a-8ed9-4184-b724-6a7186365a08">
+            <useCaseMoniker Id="62081ddd-3b04-4997-ac45-a5cc70ae2cc2" LastKnownName="Autentificación" />
+            <elementDefinition Id="83cfa5d5-849d-434e-8dc3-cabeba10f4d1" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="13f192ec-57d0-4b2e-a325-7631a1cb3d75" name="Imprimir Historial" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e9ead1f8-57f7-4f95-bd92-befdf7c72589" />
+        <additions>
+          <include Id="3599a410-0371-4a19-95ec-532f2021cbd7">
+            <useCaseMoniker Id="fa130228-2e27-4579-b06d-3c89702a5b44" LastKnownName="Selecionar 1 Alumno" />
+            <elementDefinition Id="cc3c946b-2320-4ee6-9913-56988704cdba" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b6489d51-33a1-4a3c-be51-c04a481e0456" name="Ver datos generales &#xD;&#xA;" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c7071b6a-2e0c-4d4b-a862-86801c5d7f3d" />
+        <additions>
+          <include Id="0429cb59-a614-4913-9c0b-7216f88c5a85">
+            <useCaseMoniker Id="fa130228-2e27-4579-b06d-3c89702a5b44" LastKnownName="Selecionar 1 Alumno" />
+            <elementDefinition Id="eea76590-e483-4333-8cf9-0458a369ff30" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b0a74645-115e-42ba-ad86-115937d27355" name="Ingresar al sistema" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8cf0a557-1a4f-46e0-8a3a-c793171f7187" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ea5e198f-08b6-466b-8b6e-7cc265f9f2aa" name="autentificaciónr" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e7236f88-4030-4f5e-b19e-684eeecdf677" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fa130228-2e27-4579-b06d-3c89702a5b44" name="Selecionar 1 Alumno" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d968e218-2e26-48a1-96bc-d72fb5d438b4" />
+        <suppliersInternal>
+          <dependency Id="6b6ad75e-6407-40d3-8737-8721d4f12903">
+            <useCaseMoniker Id="9c89f394-0893-4573-86c2-05dfcb74134d" LastKnownName="Estar en lista" />
+            <elementDefinition Id="fd2ba614-075e-4ae6-96d9-0a2f332f123b" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="eecc476d-cc35-4a60-8692-ebf39ba71b8e" name="Visualizar citas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="80740088-971e-4494-b5bf-cc6fda367a51" />
+        <additions>
+          <include Id="310c48e0-813b-48be-af59-35db803e4e81">
+            <useCaseMoniker Id="8877d2f9-57fc-40a9-b82a-30f73c806523" LastKnownName="Ingresar al sistema" />
+            <elementDefinition Id="c4557177-2679-44de-b4e8-dc9724adf68c" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="985f83c5-5d18-4699-b489-2e1b5c99af5b" name="Ver antecedentes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="095e328d-7aef-480a-bce5-8d60fcdc2b96" />
+        <additions>
+          <include Id="b6752cfb-2c0d-4e43-ae46-be697eb589c8">
+            <useCaseMoniker Id="fa130228-2e27-4579-b06d-3c89702a5b44" LastKnownName="Selecionar 1 Alumno" />
+            <elementDefinition Id="37328123-a278-4962-ad15-b0ef78b7fcbd" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c5a755de-546a-4626-9fbe-3591e2e94f12" name="Ver historial clínico" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="727194a0-0a08-40d2-91f2-81fd87df9ecc" />
+        <additions>
+          <include Id="f955e601-5c17-4551-9463-2def028358ec">
+            <useCaseMoniker Id="fa130228-2e27-4579-b06d-3c89702a5b44" LastKnownName="Selecionar 1 Alumno" />
+            <elementDefinition Id="665afc1a-be94-4246-aecb-b6ca6c1388f3" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="886efd52-d26d-4183-a917-c4575a98311b" name="Realizar una consulta médica" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9206f9b9-c85b-4b77-b088-65ad5a57acc0" />
+        <additions>
+          <include Id="d6cae10e-ca65-4387-a635-cf247e0fd821">
+            <useCaseMoniker Id="fa130228-2e27-4579-b06d-3c89702a5b44" LastKnownName="Selecionar 1 Alumno" />
+            <elementDefinition Id="6d552f6b-94dc-4870-b874-f13358e6668d" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9c89f394-0893-4573-86c2-05dfcb74134d" name="Estar en lista" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f2dab610-956a-4952-85eb-59b1a5e2d041" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="080a748f-7247-4d50-a601-69e6dd88ea98" name="Administrador" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6abf91af-4c1b-4bd3-8fc5-0285f23708b2" />
+        <targetEnds>
+          <association Id="0168f724-99f1-4fd6-8b42-2b9868ab8e27" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Agregar personal" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5658f93a-e990-46b0-ad92-66e6a811d31a" LastKnownName="Agregar personal" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="25e1c8a2-cab1-473e-9943-807301d21a50" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="553f613b-65bf-4985-a6b8-ba49642dd4b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cff1d6fe-8d74-40a4-b292-734869d10d2f" name="Agregar personal" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f13686bc-4919-43a8-8458-b6214f8e07fe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bcfeaad8-6f61-4721-931b-b68512ff0785" />
+          </association>
+          <association Id="ee26a9ee-93f8-4212-b458-8a5a799a378b" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Modificar personal" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2519d0bc-f570-4007-95df-a2f2d3fd634e" LastKnownName="Modificar personal" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f485c4c9-6e9b-48da-a0c2-48373f6f23ae" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="53042e4d-7b2f-44ec-91ce-e6385f23a018" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aa694fce-90ec-4285-b727-40b4b0d2b4c8" name="Modificar personal" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8fe0bf56-b99a-4a5f-b689-cdfe62e69ede" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a1986576-74b7-4e6b-b4f2-13f3866a219a" />
+          </association>
+          <association Id="b5528752-9c87-4bb7-9d49-5b3957ccb164" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Eliminar personal" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6d273078-37f3-4a68-9263-aaf79264d433" LastKnownName="Eliminar personal" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3a0d8507-f1e6-4a5b-b667-25e390fc1b55" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4399e2ab-e54d-4602-b25b-465a39406e35" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="90f04484-ecde-4414-8962-bd5e0f0e0f05" name="Eliminar personal" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9032b8ee-20bc-4a43-acab-f2aaaa66e94d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="feac2505-d705-456c-be70-131c5b9e9a77" />
+          </association>
+          <association Id="aedbfd3e-7984-42f7-b738-b6abf62998f8" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Generar estadisticas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4c80d6d0-1b3c-4d64-bbe6-8ad09d6baef2" LastKnownName="Generar reportes y estadisticas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a4545fd-97ef-46cb-8a21-f6398b7e3ee7" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7d77622e-a873-4c8a-9498-e0d144cf72fc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b9858534-077e-4d7b-9b8b-0d7663d04005" name="Generar estadisticas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0fe00b2b-5984-43a5-858f-b046640cf85a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e72b31b6-66fa-4442-966e-e49b4f34b1b8" />
+          </association>
+          <association Id="ec2af948-05a1-49a5-a0b0-835f6b41236e" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Consultas especificas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="12e6e6b4-e838-4483-bfdf-603d9f408b8f" LastKnownName="Consultas especificas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7679c3bb-3ff1-4a27-a5ee-f9f157e8afaf" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1d0458c4-6d25-4895-a836-40d6b2a78c7f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2ca1dfa4-34c0-4a56-bf69-b3e9f896f821" name="Consultas especificas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d4d3de01-1b22-4182-bd31-ea4b779b6b55" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="818ce81f-d414-4233-8e24-e63eb9aae500" />
+          </association>
+          <association Id="913f82c9-b2cb-4102-877b-b17a4a15ec9a" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Respaldos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4feb5996-b926-4387-823d-55cdfd1f4b00" LastKnownName="Respaldos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="95710708-e95a-4204-9fc0-40702f4064ae" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="66d16f78-a348-4686-87b5-fb0db4dc06d6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1179ca2e-8dcc-426f-93a3-8acfe28a43e0" name="Respaldos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5e39c94c-5e52-46ca-b355-bf1d0354f564" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="736e35c7-b335-4dad-bf0e-cc9044b9c0b2" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="12e6e6b4-e838-4483-bfdf-603d9f408b8f" name="Consultas especificas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2ecf30a6-f690-4a5e-b80d-719fd474c3e8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3a5e3ac0-e460-470f-b0b1-5a4b2b060098" name="Generar reporte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2192fafa-1512-436e-9d7c-3325a1c33377" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4c80d6d0-1b3c-4d64-bbe6-8ad09d6baef2" name="Generar reportes y estadisticas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c86f9fe2-8e81-46ce-8dd5-0301e37225df" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4feb5996-b926-4387-823d-55cdfd1f4b00" name="Respaldos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e192880e-ce66-4adc-b6db-e91faaf15ab4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="437321cb-254c-4336-a2b1-aafa1e0e4396" name="Cita de emergencia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e801a6e6-12bf-4c07-a305-f3d0f917a98d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3a75082f-88ca-4976-8d53-39eed01772d7" name="Consultas especificas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ddf114f5-6a49-4745-8f5f-7dc17ece98ab" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="db3afc6e-6a25-4fbd-b865-4017d1a1c27f" name="Chat " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d857bb82-161c-412a-b887-5ec4ee5bad3d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="ca7a1643-2c7f-4897-9492-246cbdb7426c" name="Hospital_Diagramas">
+    <elementDefinition Id="828cbd05-f35a-4229-82c2-d5742340d891" />
+    <profileInstances>
+      <packageHasProfileInstances Id="92e92f4c-c9e0-43b9-a8d3-bebe0831f192">
+        <profileInstance Id="abe230cb-877f-4858-bab2-f782870d3775" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="5d83c70a-2720-40cc-9b92-d93eec515f89">
+        <profileInstance Id="944a1aa9-a19d-47f6-93f4-18a2c682cd95" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9819e06d-e9a4-40d7-90b2-fba3e7df7b2f">
+        <profileInstance Id="515c808e-a32c-4261-8230-81d2926410f7" name="CSharpProfile">
+          <elementDefinition Id="2511137a-fbf0-4dbf-96df-cf7911967138" />
+        </profileInstance>
+        <elementDefinition Id="80ff8410-e847-4296-a169-759301227216" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="bfc2857a-91ec-4ddd-9865-d5e4d446a3c4">
+        <profileInstance Id="b06e1264-47fc-4fb4-878f-40f8c6c64145" name="TextTemplateBindings">
+          <elementDefinition Id="9613525d-8142-4ede-a65c-0bea8bf96899" />
+        </profileInstance>
+        <elementDefinition Id="b1bd4a30-4966-41f9-badd-39cb1b41030b" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

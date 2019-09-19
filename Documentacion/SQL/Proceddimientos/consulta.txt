@@ -1,0 +1,171 @@
+USE [A_Hospital]
+GO
+/****** Object:  StoredProcedure [dbo].[PConsulta]    Script Date: 04/06/2017 06:11:49 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[PConsulta]
+	
+	@Op int=null,--Opcion del procedimiento almacenado
+	@pk_Reservaciones int=null,
+	@ConsultaActiva int =null,
+	@fk_Alumno nvarchar(50)=null,
+    @fk_Especialista varchar(50)=null,
+    @Fecha varchar(50)=null,
+	@fk_Horario int = null,
+
+
+	@fk_Especialidad int=null,
+    @fechaActual date=null,
+
+		-----NuevaConsulta
+	@fk_Reservacion int =null,
+	@ResumenAntecedente nvarchar(1024)=null,
+	@Peso float=null,
+	@Talla float=null,
+	@PresionArterial float=null,
+	@ExploracionFisica nvarchar(1024)=null,
+	@Diagnostico nvarchar(2048)=null,
+	@PlanDeTratamiento nvarchar(2048)=null
+
+AS
+BEGIN
+--Indice de operaciones 
+
+--1 Listar especialidades
+--2 listar especialistas
+--3 seleccion de horarios disponibles
+--4 reguistro de una cita
+--5 ver agenda de citas solo alumno
+--6 DELETE (eliminar una consulta)
+--7 
+--8 ver agenda de citas(solo el medico)
+--9 ver historial de Citas Medicas por alumno
+--10 reguistrar una cita medica
+--11 listar datos del alumno
+--12 listar enfermedades
+--13 listar Historial de citas por pk
+
+	SET NOCOUNT ON;
+	set @fechaActual=GETDATE();
+--seleccion de especialidades
+	 if (@Op=1)
+	begin
+	select * from tbl_Especialidad
+	end
+--seleccion del especialista
+	if (@Op=2)
+	begin
+	select tbl_Especialista.Numero_Control, tbl_Especialista.Nombre + ' '+tbl_Especialista.Apellido as 'Nombre'  from tbl_Especialista where tbl_Especialista.fk_Especialidad=@fk_Especialidad;
+	end
+--seleccionamos los horarios dispnibles
+	 if (@Op=3)
+	begin
+		if (@Fecha>=GETDATE() and DATEPART(DW,@Fecha)<>7 and DATEPART(DW,@Fecha)<>1)
+		begin
+			select tbl_Horario.pk_Horario, tbl_Horario.Horario from tbl_Horario
+			where  (tbl_Horario.Horario not IN (
+			SELECT tbl_Horario.Horario
+			FROM tbl_Horario  INNER JOIN tbl_Reservacion on pk_Horario=fk_Horario  where tbl_Reservacion.Fecha= @Fecha and tbl_Reservacion.fk_Especialista=@fk_Especialista )) ;
+		end
+	end
+--Reguistra una cita
+	 if (@Op=4)
+	begin
+	insert into [dbo].[tbl_Reservacion]values(@ConsultaActiva,@fk_Alumno,@fk_Especialista,@Fecha,@fk_Horario);	 
+	end
+--Ver citas Cita Solo alumnos
+	 if (@Op=5)
+	begin
+	set @fechaActual=GETDATE();
+	select pk_Reservacion as 'Id', Nombre, Apellido,tbl_Especialidad.Descripcion as 'Categoría', CONVERT(VARCHAR(11),Fecha,106)as 'Fecha',Horario 
+	 from tbl_Reservacion
+		 inner join tbl_Especialista on tbl_Especialista.Numero_Control=tbl_Reservacion.fk_Especialista
+		  inner join tbl_Especialidad on tbl_Especialidad.pk_Especialidad=tbl_Especialista.fk_Especialidad
+		 inner join tbl_Horario on pk_Horario=fk_Horario
+		 inner join [dbo].[ceAlumnos] on ceAlumnos.alu_NumControl=tbl_Reservacion.fk_Alumno
+	where  tbl_Reservacion.fk_Alumno=@fk_Alumno and Fecha>=@fechaActual  
+	end
+    --Cancelar Cita
+	 if (@Op=6)
+	begin
+		delete from tbl_Reservacion where pk_Reservacion=@pk_Reservaciones
+	end
+	 if (@Op=7)
+	begin
+		select pk_Especialista,Nombre
+		from tbl_Especialista
+		--update ceAlumnos set ceAlumnos.alu_E3=0 where ceAlumnos.alu_ID=1
+	end
+	 if (@Op=8)--Ver citas 
+	begin
+	set @fechaActual=GETDATE();
+
+			select  pk_Reservacion as 'Id',ConsultaActiva as 'Estado', ceAlumnos.alu_Nombre +' '+ceAlumnos.alu_ApePaterno as 'Nombre',ceAlumnos.alu_NumControl as 'Matricula', CONVERT(VARCHAR(11),Fecha,106)as 'Fecha',Horario 
+			from tbl_Reservacion 
+				 inner join tbl_Especialista on tbl_Especialista.Numero_Control=tbl_Reservacion.fk_Especialista
+				 inner join tbl_Especialidad on tbl_Especialidad.pk_Especialidad=tbl_Especialista.fk_Especialidad
+				 inner join tbl_Horario on tbl_Reservacion.fk_Horario=tbl_Horario.pk_Horario
+				 inner join ceAlumnos on ceAlumnos.alu_NumControl=tbl_Reservacion.fk_Alumno
+			where( [dbo].[tbl_Reservacion].fk_Especialista=@fk_Especialista  and  Fecha=@fechaActual  and tbl_Reservacion.ConsultaActiva<=1 ) or tbl_Reservacion.ConsultaActiva=3
+	  end
+	 if (@Op=9)
+	begin
+		select tbl_HistorialCitas.pk_HistorialCitas as 'Id',tbl_HistorialCitas.fk_Alumno as 'Matrícula' ,tbl_Especialista.Nombre + ' '+tbl_Especialista.Apellido as 'Especialista ',  CONVERT(VARCHAR(11),tbl_Reservacion.Fecha,106)  as 'Fecha'
+		 from tbl_HistorialCitas
+		 inner join tbl_Especialista on tbl_HistorialCitas.fk_Especialista=pk_Especialista
+		 inner join tbl_Reservacion on tbl_HistorialCitas.fk_Reservacion=tbl_Reservacion.pk_Reservacion
+		where tbl_HistorialCitas.fk_Alumno=@fk_Alumno 
+		
+	end
+	 if(@Op=10)--
+	 begin
+		 insert into tbl_HistorialCitas values(@fk_Alumno,@fk_Especialista,@fk_Reservacion,@ResumenAntecedente,@Peso,@Talla,@PresionArterial,@ExploracionFisica,@Diagnostico,@PlanDeTratamiento)
+	    update tbl_Reservacion  set  tbl_Reservacion.ConsultaActiva=2 where [dbo].[tbl_Reservacion].pk_Reservacion=@fk_Reservacion
+	  end
+	   if(@Op=11)--
+	 begin
+	 select * from ceAlumnos where alu_NumControl=@fk_Alumno
+	 end
+  if(@Op=12)--
+	 begin
+	 select * from tbl_enfermedad
+	 end
+	  if(@Op=13)--
+	 begin
+	 --0id de cita
+	 -- 1matricula del alumno
+	 --2resumente antecente
+	 --3peso
+	 --4talla
+	 --5presion arterial
+	 --6diagnostico
+	 --7 plan de tratamitneo
+	 --8exploracion
+
+	 --9 nombre del doc--
+	 --10 especialisdad--
+	 --11 fecha
+	 --12 horario 
+	 --13 nombre apellidos
+	 --14 matricula medico
+	
+
+	 select pk_HistorialCitas as 'Id',tbl_HistorialCitas.fk_Alumno as 'Matricula', tbl_HistorialCitas.ResumenAntecedente as 'Resumen de antecedente',Peso,Talla,PresionArterial,tbl_enfermedad.Descripcion,PlanDeTratamiento,ExploracionFisica,tbl_Especialista.Nombre +' '+ tbl_Especialista.Apellido as 'Medico',tbl_Especialidad.Descripcion,tbl_Reservacion.Fecha,tbl_Horario.Horario, ceAlumnos.alu_Nombre +' '+ceAlumnos.alu_ApePaterno+' '+alu_ApePaterno as 'Alumno',tbl_Especialista.Numero_Control
+	 from tbl_HistorialCitas 
+	 inner join tbl_Reservacion on tbl_Reservacion.pk_Reservacion=tbl_HistorialCitas.fk_Reservacion
+	 inner join tbl_Horario on tbl_Reservacion.fk_Horario=tbl_Horario.pk_Horario
+	 inner join tbl_Especialista on tbl_Especialista.Numero_Control=tbl_Reservacion.fk_Especialista
+	 inner join tbl_Especialidad on tbl_Especialista.fk_Especialidad=tbl_Especialidad.pk_Especialidad
+	 inner join ceAlumnos on ceAlumnos.alu_NumControl=tbl_Reservacion.fk_Alumno
+	 inner join tbl_enfermedad on tbl_HistorialCitas.Diagnostico=tbl_enfermedad.pk_enferdad
+	 where pk_HistorialCitas= @pk_Reservaciones
+
+	 end
+END
+
+
+
+

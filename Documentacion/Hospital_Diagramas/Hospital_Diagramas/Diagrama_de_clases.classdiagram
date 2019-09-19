@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="6ef132b3-8bca-4489-84d4-a7781f32c1e7" name="Diagrama_de_clases" linkedPackageId="7a6e8b43-c96a-490e-bbf6-bc82d40847a1" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="e1fd9b42-2ecb-4748-8070-e298ae8ce128" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="33d6ebc6-9087-459b-a102-f3d8f7c24924" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="3a1747e8-5c7a-4896-9c5b-4cfaee824b72">
+          <propertyInstance Id="660207e3-0e39-4920-b5b5-6923c144d414" name="BaseName">
+            <elementDefinition Id="3a32569f-4b83-47c3-b3ba-a2a4622a3f82" />
+          </propertyInstance>
+          <elementDefinition Id="bb2d0eff-751f-48a0-be90-0139a6e43242" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f634b97f-85f3-41d8-b02e-ca9690556edb">
+          <propertyInstance Id="94f13a92-cfd9-4c7f-8eea-da723072f882" name="ClrAttributes">
+            <elementDefinition Id="6ca4db4b-473d-4190-a04f-2ac3b9741b88" />
+          </propertyInstance>
+          <elementDefinition Id="36ff0a68-2a34-4c0d-868d-ccadefe5926b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="45162b8d-0f07-46ac-83a5-9ce3f9c94e2c">
+          <propertyInstance Id="6f656aa0-4567-4506-807c-ce1b35e13bf4" name="Usings">
+            <elementDefinition Id="1f10f89e-9c94-4d88-bf48-c79ef4bfa356" />
+          </propertyInstance>
+          <elementDefinition Id="6326687b-c987-4e17-9940-8d27ed56224b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="bd690c1f-9fc4-4735-acec-13de1ab29014" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="35b0bc45-6bb2-49ae-862d-7a490cfa0970" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="2ca0e41c-4909-4b39-8a46-1179c4a20446">
+          <propertyInstance Id="143305f8-3a77-458b-a1bb-8807483408ce" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="8e4407a6-1f48-46a2-9485-6c06604762b8" />
+          </propertyInstance>
+          <elementDefinition Id="0917d4b9-b33b-4415-b80b-a24ac831476c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9420f727-6500-4cdd-85a7-5775aaf3ebe9">
+          <propertyInstance Id="ec0aa46f-908a-4697-971f-e1cf2d5c9ff4" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="240386ec-7b97-4818-8ba7-abcf1a0c7c8e" />
+          </propertyInstance>
+          <elementDefinition Id="539da814-7925-4401-9c63-4b58a6d84d19" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="96a5dc86-7360-4b70-b59b-d645e705bc83">
+          <propertyInstance Id="467da504-e6fe-450d-ac6d-fda4fdcfec5a" name="ProjectPath" value="ClassTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj|EnumTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj|InterfaceTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj|StructTemplate=..\Hospital_DiagramasLib\Hospital_DiagramasLib.csproj">
+            <elementDefinition Id="349258c7-69f4-45a1-80bb-cbb21f244a16" />
+          </propertyInstance>
+          <elementDefinition Id="fc09f8e2-1a80-4280-9586-5a61ae3c49cd" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="36e57715-70df-4033-89b4-80323f0202c4">
+          <propertyInstance Id="49583ac6-e5de-4d50-958e-a6a3ffc16acc" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="dcd63675-b2a4-4fc5-9f1b-63dd0a5536a3" />
+          </propertyInstance>
+          <elementDefinition Id="f1488310-6c3e-44eb-b5a6-dc0a30fa1955" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5a994177-e23b-46b5-81af-9934bc0d9f15">
+          <propertyInstance Id="0bfbdaa5-6d76-47aa-ab2b-7a59abcac0a5" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="3fc67206-f3fb-4bb9-8c26-df25357bafae" />
+          </propertyInstance>
+          <elementDefinition Id="e87f5030-26f9-4b49-9436-1a53bae710f0" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="56091df0-34da-4809-9668-4b5288e6b060">
+          <propertyInstance Id="97350896-4aeb-4ce4-9433-e84e5897e83f" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="763225e1-0a5c-47ae-848c-60584f3fe570" />
+          </propertyInstance>
+          <elementDefinition Id="2be39a5b-f099-4194-9d8b-f3f5f4db7450" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="30e48cfa-6fa9-4ebc-b93a-cd008cb79330">
+          <propertyInstance Id="f5cf48db-fce4-4c2e-8456-1aabc32aea78" name="Parameters">
+            <elementDefinition Id="f1ca5284-e1ff-4950-8350-109ea6811409" />
+          </propertyInstance>
+          <elementDefinition Id="6ec1ca8e-64d6-4aec-b3e4-642f6d264527" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="494332b0-ed89-4323-8e05-b1a449a89f17" name="Persona" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="eff317c2-352f-4c90-89da-92779481a70f" />
+        <ownedAttributesInternal>
+          <property Id="5575fb3f-41d7-47de-967a-c6e3ac9b6b09" name="Nombre" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1344faf8-e34c-4dca-8ab0-bad2abea7e92" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="7a586595-b608-4350-93d4-1e8ff608b74b" name="Apellidos" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a38d3136-25c9-4463-94a9-3b9283f7a0f0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="463aa3fa-629b-4735-a0c8-3bb8fa2bbceb" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="1c828de8-1f90-4597-9b3a-cbba079f90dd" name="FechaNacimiento" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f4d9fcc7-3b40-4a26-b9ee-f8cb56f0bdb7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4cdc0e88-6551-4280-8f91-e4e970c256fb" LastKnownName="date" />
+            </type_NamedElement>
+          </property>
+          <property Id="9bb073ac-8f93-4b6d-a7fe-dbff192a4c86" name="Telefono" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="914c93a8-7342-45b3-b408-72caba11ba72" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7428f266-6ad3-4ff8-a2b0-8b1f6beda83a" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+          <property Id="79e4a90e-fbd7-4e87-afc5-d8227fb9afb4" name="Genero" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="76507d2f-4d3e-435b-9577-13c61fb96331" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="ea00e5d1-52bc-4a5a-a96f-b5910f6f409e" name="Matricula" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ad7bbd47-a64a-4b5e-b2d3-f42b76b93908" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7428f266-6ad3-4ff8-a2b0-8b1f6beda83a" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+          <property Id="32c145c7-2563-4b95-82c1-b7480ed2d29e" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3e90f72b-bf86-4995-ae63-8a74d4e3b192" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="06fe2193-e7a1-4c04-ab46-35e8cf629241" name="Contrasena" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9b82d56b-1e05-47d4-919b-70be3cc1317f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="aee29f5b-02ee-4b62-a465-11b25839e1f6" name="Foto" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="17fd6d4b-2550-4adb-943f-79af81781dea" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b009f262-d180-4ed9-96b7-7b5bc49f8508" name="Ingresar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9ff9c1f6-4b28-45ee-a4a2-ed67ec9be6ca" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="899d7c7a-fb2b-42fe-a6ec-37a90eb74048" name="usuario" direction="In">
+                  <elementDefinition Id="4918361d-e6c8-48fc-a6c9-a9b42d4efbcb" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e4d67e93-44ab-45dc-b9fa-2d0986146bdb" name="contrasena" direction="In">
+                  <elementDefinition Id="cb60874b-3a36-4c24-ab12-1d27f2121f18" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="31fd6f58-b782-4db3-b615-133057d0ad89" name="Agendar_Cita" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="53f559c2-182b-4c51-97f8-9e04234724aa" />
+          </operation>
+          <operation Id="9326f034-149d-4cbf-9716-38a3c182160c" name="Cancelar_Cita" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a7013a1b-8449-45d1-b6f1-a1b9636147e7" />
+          </operation>
+          <operation Id="e9b7c7d0-98a4-42ac-9ea4-009b5ab6ed87" name="Consultar_cita" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c579c691-e755-4488-95d6-95bfee08b168" />
+          </operation>
+          <operation Id="e456b16f-a9a3-40e5-8a27-67c5c5cb1cef" name="Imprimir_Cita" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e7c2685d-7f3c-4027-9e74-e02a14e0c366" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4cdc0e88-6551-4280-8f91-e4e970c256fb" name="date" isAbstract="false" isLeaf="false" cachedFullName="date">
+        <elementDefinition Id="04967292-70d8-44aa-a8d0-c030adc46090" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="463aa3fa-629b-4735-a0c8-3bb8fa2bbceb" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7428f266-6ad3-4ff8-a2b0-8b1f6beda83a" name="Int" isAbstract="false" isLeaf="false" cachedFullName="Int">
+        <elementDefinition Id="c7dcb52e-2afa-4530-8e62-545cefd9b6d9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b0ccea91-895b-444f-be39-a27f0b96e0db" name="Alumno" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8130a9a9-d5a6-48ee-a417-e3992144466c" />
+        <generalsInternal>
+          <generalization Id="eb9a025e-fd79-4da3-bdf7-bc9075cc7eed" isSubstitutable="false">
+            <classMoniker Id="494332b0-ed89-4323-8e05-b1a449a89f17" LastKnownName="Persona" />
+            <elementDefinition Id="7d9d5529-c711-4f6c-817b-1204ce24e210" />
+          </generalization>
+          <generalization Id="15d8f0b3-49f5-4181-be0c-5bd781691dbc" isSubstitutable="false">
+            <classMoniker Id="53149386-d7d8-43be-a61c-df4b9879b3b3" LastKnownName="Consultas" />
+            <elementDefinition Id="0d839cb6-bebb-4820-9e2a-368cfb39d15e" />
+          </generalization>
+          <generalization Id="30c44423-4134-489c-86a8-17b326b034dd" isSubstitutable="false">
+            <classMoniker Id="1664949b-97bc-4296-a865-9a8f5861ef50" LastKnownName="Preguntas" />
+            <elementDefinition Id="9dc54a4a-5dda-4277-8f92-23349a1acd4d" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="35b77d70-2b4f-461e-8657-fada2a67c02c" name="Carrera" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e6739224-d855-4860-b3ec-9d0a2b1deeb1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="b3cabf08-e1e3-4746-9309-6866de490a17" name="Cuatrimestre" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fbe63cff-0f6c-437e-9e1c-0c5a96d8a136" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a7a25f96-7f09-414d-aa51-177c207e001e" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a7a25f96-7f09-414d-aa51-177c207e001e" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5f0c4f76-c1d2-4b03-adf8-f0acd986d7e3" name="Especialista" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="36624c4f-2045-4785-b2d8-aa7e864e8dc3" />
+        <generalsInternal>
+          <generalization Id="c945d75c-4aac-46b4-9510-795b880ff206" isSubstitutable="false">
+            <classMoniker Id="494332b0-ed89-4323-8e05-b1a449a89f17" LastKnownName="Persona" />
+            <elementDefinition Id="954fbe40-90c2-4ebe-837c-6d348ee86dad" />
+          </generalization>
+          <generalization Id="ba8a489e-acbd-462d-a906-af617d52c5f0" isSubstitutable="false">
+            <classMoniker Id="53149386-d7d8-43be-a61c-df4b9879b3b3" LastKnownName="Consultas" />
+            <elementDefinition Id="7f6609ec-061f-40b5-a6ed-39347a8281c7" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="8488ebbd-8903-42fa-94f2-0b7278bee090" name="Tipo_consulta" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0e388166-c69a-4beb-93cd-84be44b8334e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="4a12258f-c01e-4445-9e44-af6b94ae28e6" name="Visualizar_citas" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3fa6b185-9799-4bcb-ad88-c3dea40250fd" />
+          </operation>
+          <operation Id="782fcc7d-7838-4c02-b789-736b9bfb5b72" name="Realizar_consulta_medica" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7dbb3e5e-27d0-4100-9ce9-d862f977dd36" />
+          </operation>
+          <operation Id="9e20f8b7-bbcd-4a6f-8710-ed0d873aab8a" name="Ver_historial" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="754008b8-4cb8-4d01-9d67-df0a78dcda67" />
+          </operation>
+          <operation Id="9ed6d580-ed96-4bb4-9e2c-b4d09e6a0302" name="Ver_antecedentes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b30df173-ce6c-4d86-9790-55df1913dbf4" />
+          </operation>
+          <operation Id="883de99e-3ab6-4709-be22-10a859abe5fd" name="Ver_datosG" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="50fc79b8-429e-45e2-a0fc-68254a1a8768" />
+          </operation>
+          <operation Id="264518d9-39f5-4db9-85f9-7f1db3388541" name="Generar_reporte" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d0ab1116-11f7-471c-b4df-9df6235e9310" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5faa34d9-8d1a-4a2e-a8f4-46caae9347c9" name="Administrador" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b351d6cc-3d6e-4408-afe9-3736a61be54f" />
+        <generalsInternal>
+          <generalization Id="0ec45cb6-756e-48f9-84a4-e1c5f6f06084" isSubstitutable="false">
+            <classMoniker Id="494332b0-ed89-4323-8e05-b1a449a89f17" LastKnownName="Persona" />
+            <elementDefinition Id="e4732717-c5a0-49e1-b468-4e3ddb7ab762" />
+          </generalization>
+          <generalization Id="9df17b1c-559b-4a78-8539-6804fca92d28" isSubstitutable="false">
+            <classMoniker Id="53149386-d7d8-43be-a61c-df4b9879b3b3" LastKnownName="Consultas" />
+            <elementDefinition Id="87d2b19f-3dee-4284-ab09-3e7a22792d7c" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="b9d60928-b83b-43c3-add2-66f70cc6cfad" name="Generar_Reporte" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="afa1e529-e2d9-4c5e-a23b-d4bb91622a38" />
+          </operation>
+          <operation Id="99598e52-edff-4552-86f2-a2ba16bec3e1" name="Generar_Estadistica" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d30326ad-c165-4a76-9278-b262f1eada6d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1664949b-97bc-4296-a865-9a8f5861ef50" name="Preguntas" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6c479310-f878-4cf0-a14c-6f41c84167d7" />
+        <ownedAttributesInternal>
+          <property Id="cddb677b-7a2a-4c4e-8031-4537fac2b201" name="Pregunta1" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="381a1aa7-c526-4168-8dff-a324550695c1" />
+          </property>
+          <property Id="782e0fac-a191-4c93-9094-f2dcd1bb5ae6" name="Pregunta2" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="58e95329-8d2f-4f4c-9619-c9b3ed868faa" />
+          </property>
+          <property Id="c0559b7d-77d9-4a28-971f-3baf016e182a" name="Pregunta3" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="21573986-9320-4c78-860c-33dd73a54167" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="7f18ab1f-e47c-432e-ab52-f658e29eb47e" name="Cuestionario" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7cf85683-1f0d-4cf3-b36c-1479c07c38bc" />
+          </operation>
+          <operation Id="36f45d70-0d55-498a-9e59-901b24c7ac85" name="Verificar_cuestionario" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="250dd63f-64c3-43f8-a51a-ddeae4eb8d70" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="53149386-d7d8-43be-a61c-df4b9879b3b3" name="Consultas" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="97dd7a32-9821-42ac-8c5e-5d4adaa2bf71" />
+        <ownedOperationsInternal>
+          <operation Id="c0af03b1-70cb-4a78-95ce-21340deb19cd" name="Ingresar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="50e3d9c6-cca1-4d18-80cf-ddd5ad58a360" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7ff88cb9-e5d7-4e54-88c8-162242ee2622" name="Personal" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d44449e8-0371-4872-a68a-38080a3008bb" />
+        <generalsInternal>
+          <generalization Id="82c8f706-09f6-4890-8ea8-368b7cffbd4f" isSubstitutable="false">
+            <classMoniker Id="494332b0-ed89-4323-8e05-b1a449a89f17" LastKnownName="Persona" />
+            <elementDefinition Id="b2481c26-f75b-4528-a97f-0418c10eb438" />
+          </generalization>
+          <generalization Id="e3b56270-ca37-4164-a48e-4dfbd2af1bf4" isSubstitutable="false">
+            <classMoniker Id="1664949b-97bc-4296-a865-9a8f5861ef50" LastKnownName="Preguntas" />
+            <elementDefinition Id="4f0b0632-ed84-4799-97d5-b6599a65fb98" />
+          </generalization>
+          <generalization Id="1ade52c1-7e55-4a57-9bae-919e613f0bbf" isSubstitutable="false">
+            <classMoniker Id="53149386-d7d8-43be-a61c-df4b9879b3b3" LastKnownName="Consultas" />
+            <elementDefinition Id="f599145e-2b2f-4c46-aab2-aaceebf1966f" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="f10d587b-ba7d-49f3-a183-a0657b7d3085" name="Area" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ab92f598-b9f9-4b91-9262-40e5f464e5dd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="4229ac33-2e81-4d23-96d1-cf55c2e3f33c" name="Turno" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="70e8d921-656c-4f24-9051-b4dbb4966fa6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="383ce51d-bf8a-4874-a45b-22615bb71ed0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="7a6e8b43-c96a-490e-bbf6-bc82d40847a1" name="Hospital_Diagramas">
+    <elementDefinition Id="828cbd05-f35a-4229-82c2-d5742340d891" />
+    <profileInstances>
+      <packageHasProfileInstances Id="43c7e33d-4143-41ee-ac1f-8fa7cdcfa764">
+        <profileInstance Id="c4f39d56-9bc8-448a-833b-160ca28c5f2a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="dd9f3689-20c3-4c56-8caa-b388362d7e33">
+        <profileInstance Id="1e487cec-d71a-4bf3-a00f-2e8a54b6dcbd" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c1fef903-0bf9-40c4-a993-c75e4a188201">
+        <profileInstance Id="b60ff8c3-539a-4b8c-b868-0d9b5ef96264" name="CSharpProfile">
+          <elementDefinition Id="2511137a-fbf0-4dbf-96df-cf7911967138" />
+        </profileInstance>
+        <elementDefinition Id="80ff8410-e847-4296-a169-759301227216" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9074d4de-2208-481e-a47e-31041b4de03c">
+        <profileInstance Id="afa6378b-8feb-4f2c-8bf2-d7996bb597db" name="TextTemplateBindings">
+          <elementDefinition Id="9613525d-8142-4ede-a65c-0bea8bf96899" />
+        </profileInstance>
+        <elementDefinition Id="b1bd4a30-4966-41f9-badd-39cb1b41030b" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

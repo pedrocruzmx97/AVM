@@ -1,0 +1,80 @@
+USE [A_Hospital]
+GO
+/****** Object:  StoredProcedure [dbo].[PAlumno]    Script Date: 04/06/2017 06:11:30 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[PAlumno]
+@Op int =0,
+@alu_E1 int =null,
+@alu_E2 int =null,
+@alu_E3 int =null,
+@alu_ConestetoEncuesta int =null,
+@alu_Rol int =null,
+@alu_NumControl varchar(9) =null,
+@alu_Nombre varchar(60)  =null,
+@alu_ApePaterno varchar(20)  =null,
+@alu_ApeMaterno varchar(20)  =null,
+@alu_Sexo char(1)  =null,
+@esp_Id tinyint  =null,
+@pes_Id tinyint  =null,
+@alu_CreditosAcum smallint =null,
+@alu_StatusAct char(2) =null,
+@alu_SemestreAct char(2) =null,
+@per_ID_Ingreso tinyint =null,
+@alu_inscrito char(1) =null,
+@alu_Preinscrito char(1) =null,
+@alu_CreditosActu tinyint =null,
+@alu_AnioIngreso char(4) =null,
+@per_ID_Termin tinyint =null,
+@alu_AnioTermin char(4)=null,
+@alu_Password varchar(40) =null,
+@alu_MotivoBaja varchar(50)=null,
+@alu_ClaveAutorizSem varchar(15) =null,
+@alu_SemProrro tinyint =null,
+@per_ID_BajaTem tinyint =null,
+@alu_AnioBajaTem smallint =null,
+@alu_FolioCertificado char(10) =null,
+@alu_LibroCertificado char(10) =null,
+@alu_aFojasCertificado char(10) =null,
+@alu_FechaCertificado char(10) =null,
+@moe_ID tinyint =null,
+@alu_SemAutorizado tinyint =null,
+@alu_CruceHoras tinyint =null,
+@alu_Foto image =null,
+@alu_FotoNombre  varchar(50)=0,
+@alu_InsBProtesta bit =null,
+@alu_Bloqueado bit =null,
+@tut_ID int =null
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+
+
+	if (@Op=1)--Validacion del usuario 
+	begin
+	select * from ceAlumnos where alu_NumControl=@alu_NumControl and alu_Password=@alu_Password 
+
+	end
+	if @Op=2--Actulizacion de datos solo con el id
+	begin
+	select * from ceAlumnos where alu_NumControl=@alu_NumControl 
+	end
+	if @Op=3
+	begin
+    select * from ceAlumnos 
+	end
+	if @Op=4
+	begin
+    select * from ceAlumnos 
+	end
+	if @Op=5
+	begin
+    select * from ceAlumnos where alu_NumControl=@alu_NumControl;
+	end
+	
+	
+

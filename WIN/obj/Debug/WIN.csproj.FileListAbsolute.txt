@@ -1,0 +1,8 @@
+C:\Users\Octavio\Desktop\A_Hospital\WIN\bin\Debug\WIN.exe.config
+C:\Users\Octavio\Desktop\A_Hospital\WIN\bin\Debug\WIN.exe
+C:\Users\Octavio\Desktop\A_Hospital\WIN\bin\Debug\WIN.pdb
+C:\Users\Octavio\Desktop\A_Hospital\WIN\obj\Debug\WIN.csprojResolveAssemblyReference.cache
+C:\Users\Octavio\Desktop\A_Hospital\WIN\obj\Debug\WIN.Properties.Resources.resources
+C:\Users\Octavio\Desktop\A_Hospital\WIN\obj\Debug\WIN.csproj.GenerateResource.Cache
+C:\Users\Octavio\Desktop\A_Hospital\WIN\obj\Debug\WIN.exe
+C:\Users\Octavio\Desktop\A_Hospital\WIN\obj\Debug\WIN.pdb
